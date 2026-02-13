@@ -1,0 +1,6 @@
+pyproject.toml
+elden_ring_mod_examination.egg-info/PKG-INFO
+elden_ring_mod_examination.egg-info/SOURCES.txt
+elden_ring_mod_examination.egg-info/dependency_links.txt
+elden_ring_mod_examination.egg-info/requires.txt
+elden_ring_mod_examination.egg-info/top_level.txt

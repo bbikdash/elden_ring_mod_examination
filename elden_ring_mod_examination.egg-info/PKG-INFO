@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: elden_ring_mod_examination
+Version: 0.0.1
+Summary: Bassam's Production Object Detection Training Framework
+Author-email: Bassam Bikdash <bbikdash@github.com>
+Project-URL: Homepage, https://github.com/bbikdash/lightning_object_detection
+Description-Content-Type: text/markdown
+Requires-Dist: numpy==2.4.2
+Requires-Dist: pandas==3.0.0
+Requires-Dist: tqdm>=4.67.3
+Requires-Dist: PyYaml>=6.0.3
+Requires-Dist: sty>=1.0.6
+Requires-Dist: isort>=7.0.0
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: pytest>=9.0.2
