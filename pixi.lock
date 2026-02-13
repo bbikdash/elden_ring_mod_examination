@@ -84,7 +84,7 @@ packages:
 - pypi: ./
   name: elden-ring-mod-examination
   version: 0.0.1
-  sha256: 046b32a18641a80bc026ab00486b317f5c3e15002015e4527e9e230115e2b344
+  sha256: bf11bf2e619c509c7c758d7303d18f14bb0625818132b305e910ef815753f183
   requires_dist:
   - numpy==2.4.2
   - pandas==3.0.0
@@ -93,7 +93,7 @@ packages:
   - sty>=1.0.6
   - isort>=7.0.0
   - loguru>=0.7.3
-  - pytest
+  - pytest>=9.0.2
 - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-78.2-h33c6efd_0.conda
   sha256: 142a722072fa96cf16ff98eaaf641f54ab84744af81754c292cb81e0881c0329
   md5: 186a18e3ba246eccfc7cff00cd19a870
