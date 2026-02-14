@@ -57,9 +57,9 @@ def main():
     parser = ArgumentParser(description="Fine conflicting references",
                             formatter_class=ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument("-m", "--modified-csv", type=str, default="./data/BehaviorParam_PC.csv",
+    parser.add_argument("-m", "--modified-csv", type=str, default="./data/unlocked_unique_skills_free/BehaviorParam_PC.csv",
                         help="Dir path to dump augmentations images to")
-    parser.add_argument("-r", "--reference-csv", type=str, default="./data/BehaviorParam_PC.csv",
+    parser.add_argument("-r", "--reference-csv", type=str, default="./data/reference/BehaviorParam_PC.csv",
                         help="")
     args = parser.parse_args()
 

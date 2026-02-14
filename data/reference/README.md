@@ -1,0 +1,1 @@
+These CSVs were generated in Smithbox 2.1 by loading the Elden Ring `regulation.bin` v1.16.1 (the latest version as of February 2026). None of the parameters are modified and should be used as reference. There are lots of new rows related to DLC items and actions.

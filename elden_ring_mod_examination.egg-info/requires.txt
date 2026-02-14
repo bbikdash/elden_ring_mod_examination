@@ -1,8 +1,0 @@
-numpy==2.4.2
-pandas==3.0.0
-tqdm>=4.67.3
-PyYaml>=6.0.3
-sty>=1.0.6
-isort>=7.0.0
-loguru>=0.7.3
-pytest>=9.0.2

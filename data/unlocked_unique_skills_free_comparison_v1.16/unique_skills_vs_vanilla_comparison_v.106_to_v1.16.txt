@@ -1,0 +1,918 @@
+# Field values follow this format: [Comparison Value] -> [Primary Value]
+[-- BehaviorParam_PC --]
+  101400800 Default - Axe:
+    [category]: 1 -> 2
+
+  101400810 Default - Axe:
+    [category]: 1 -> 2
+
+  101400820 Default - Axe:
+    [category]: 1 -> 2
+
+  101400830 Default - Axe:
+    [category]: 1 -> 2
+
+  101400860 Default - Axe:
+    [category]: 1 -> 2
+
+  101400870 Default - Axe:
+    [category]: 1 -> 2
+
+  101400880 Default - Axe:
+    [category]: 1 -> 2
+
+  101400890 Default - Axe:
+    [category]: 1 -> 2
+
+  400000900 (Maliketh's Black Blade) does not exist in comparison.
+  400000901 (Maliketh's Black Blade) does not exist in comparison.
+  400000905 (Maliketh's Black Blade) does not exist in comparison.
+  400000906 (Maliketh's Black Blade) does not exist in comparison.
+  400000907 (Maliketh's Black Blade) does not exist in comparison.
+  400000910 (Maliketh's Black Blade) does not exist in comparison.
+  400000911 (Maliketh's Black Blade) does not exist in comparison.
+  400000950 (Winged Greathorn - [Ash of War] Soul Stifler - FP - Bullet) does not exist in comparison.
+  500000100 (Sword of Night and Flame) does not exist in comparison.
+  500000105 (Sword of Night and Flame) does not exist in comparison.
+  500000106 (Sword of Night and Flame) does not exist in comparison.
+  500000107 (Sword of Night and Flame) does not exist in comparison.
+  500000108 (Sword of Night and Flame) does not exist in comparison.
+  500000109 (Sword of Night and Flame) does not exist in comparison.
+  500000110 (Sword of Night and Flame) does not exist in comparison.
+  500000120 (Sword of Night and Flame) does not exist in comparison.
+  500000125 (Sword of Night and Flame) does not exist in comparison.
+  500000126 (Sword of Night and Flame) does not exist in comparison.
+  500000130 (Sword of Night and Flame) does not exist in comparison.
+  500000200 (Winged Scythe - [Ash of War] Angel's Wings - FP - Hit #1) does not exist in comparison.
+  500000201 (Winged Scythe - [Ash of War] Angel's Wings - FP - Hit #2) does not exist in comparison.
+  500000202 (Winged Scythe - [Ash of War] Angel's Wings - FP - Leap Hit) does not exist in comparison.
+  500000205 (Winged Scythe - [Ash of War] Angel's Wings - No FP - Hit #1) does not exist in comparison.
+  500000206 (Winged Scythe - [Ash of War] Angel's Wings - No FP - Hit #2) does not exist in comparison.
+  500000250 (Grafted Dragon - [Ash of War] Bear Witness! - FP - Bullet #1) does not exist in comparison.
+  500000251 (Grafted Dragon - [Ash of War] Bear Witness! - FP - Bullet #2) does not exist in comparison.
+  500000252 (Grafted Dragon - [Ash of War] Bear Witness! - FP - Bullet #3) does not exist in comparison.
+  500000253 (Grafted Dragon - [Ash of War] Bear Witness! - FP - Bullet #4) does not exist in comparison.
+  500000254 (Grafted Dragon - [Ash of War] Bear Witness! - FP - Bullet #5) does not exist in comparison.
+  500000255 (Grafted Dragon - [Ash of War] Bear Witness! - FP - Bullet #6) does not exist in comparison.
+  500000256 (Grafted Dragon - [Ash of War] Bear Witness!) does not exist in comparison.
+  500000260 (Grafted Dragon - [Ash of War] Bear Witness! - No FP - Hit) does not exist in comparison.
+  500000300 (Envoy's Greathorn - [Ash of War] Great Oracular Bubble - FP - Bullet) does not exist in comparison.
+  500000301 (Envoy's Greathorn - [Ash of War] Great Oracular Bubble) does not exist in comparison.
+  500000350 (Commander's Standard - [Ash of War] Rallying Standard - FP - Bullet) does not exist in comparison.
+  500000400 (Blasphemous Blade - [Ash of War] Taker's Flames - FP - Bullet #1) does not exist in comparison.
+  500000401 (Blasphemous Blade - [Ash of War] Taker's Flames) does not exist in comparison.
+  500000402 (Blasphemous Blade - [Ash of War] Taker's Flames) does not exist in comparison.
+  500000403 (Blasphemous Blade - [Ash of War] Taker's Flames - FP - Bullet #2) does not exist in comparison.
+  500000404 (Blasphemous Blade - [Ash of War] Taker's Flames) does not exist in comparison.
+  500000405 (Blasphemous Blade - [Ash of War] Taker's Flames - No FP - Hit) does not exist in comparison.
+  500000500 (Moonveil - [Ash of War] Transient Moonlight - FP - Bullet) does not exist in comparison.
+  500000501 (Moonveil - [Ash of War] Transient Moonlight - FP - Slash) does not exist in comparison.
+  500000505 (Moonveil - [Ash of War] Transient Moonlight - No FP - Bullet) does not exist in comparison.
+  500000506 (Moonveil - [Ash of War] Transient Moonlight - No FP - Slash) does not exist in comparison.
+  500000550 (Magma Whip Candlestick - [Ash of War] Sea of Magma - FP - Spin #1) does not exist in comparison.
+  500000551 (Magma Whip Candlestick - [Ash of War] Sea of Magma - FP - Spin #2) does not exist in comparison.
+  500000552 (Magma Whip Candlestick - [Ash of War] Sea of Magma - FP - Followup #1 - Spin #1) does not exist in comparison.
+  500000553 (Magma Whip Candlestick - [Ash of War] Sea of Magma - FP - Followup #1 - Spin #2) does not exist in comparison.
+  500000554 (Magma Whip Candlestick - [Ash of War] Sea of Magma - FP - Followup #2 - Spin) does not exist in comparison.
+  500000555 (Magma Whip Candlestick - [Ash of War] Sea of Magma - FP - Bullet) does not exist in comparison.
+  500000556 (Magma Whip Candlestick - [Ash of War] Sea of Magma) does not exist in comparison.
+  500000560 (Magma Whip Candlestick - [Ash of War] Sea of Magma - No FP - Spin #1) does not exist in comparison.
+  500000561 (Magma Whip Candlestick - [Ash of War] Sea of Magma - No FP - Spin #2) does not exist in comparison.
+  500000562 (Magma Whip Candlestick - [Ash of War] Sea of Magma - No FP - Followup #1 - Spin #1) does not exist in comparison.
+  500000563 (Magma Whip Candlestick - [Ash of War] Sea of Magma - No FP - Followup #1 - Spin #2) does not exist in comparison.
+  500000564 (Magma Whip Candlestick - [Ash of War] Sea of Magma - No FP - Followup #2 - Spin) does not exist in comparison.
+  500000600 (Mohgwyn's Sacred Spear) does not exist in comparison.
+  500000605 (Mohgwyn's Sacred Spear -) does not exist in comparison.
+  500000606 (Mohgwyn's Sacred Spear) does not exist in comparison.
+  500000610 (Mohgwyn's Sacred Spear) does not exist in comparison.
+  500000615 (Mohgwyn's Sacred Spear -) does not exist in comparison.
+  500000616 (Mohgwyn's Sacred Spear) does not exist in comparison.
+  500000620 (Mohgwyn's Sacred Spear) does not exist in comparison.
+  500000625 (Mohgwyn's Sacred Spear -) does not exist in comparison.
+  500000626 (Mohgwyn's Sacred Spear) does not exist in comparison.
+  500000635 (Mohgwyn's Sacred Spear -) does not exist in comparison.
+  500000640 (Mohgwyn's Sacred Spear -) does not exist in comparison.
+  500000645 (Mohgwyn's Sacred Spear -) does not exist in comparison.
+  500000650 (Envoy's Long Horn - [Ash of War] Bubble Shower - FP - Bullet) does not exist in comparison.
+  500000651 (Envoy's Long Horn - [Ash of War] Bubble Shower) does not exist in comparison.
+  500000652 (Envoy's Long Horn - [Ash of War] Bubble Shower) does not exist in comparison.
+  500000700 (Morgott's Cursed Sword) does not exist in comparison.
+  500000705 (Morgott's Cursed Sword) does not exist in comparison.
+  500000706 (Morgott's Cursed Sword) does not exist in comparison.
+  500000707 (Morgott's Cursed Sword) does not exist in comparison.
+  500000708 (Morgott's Cursed Sword) does not exist in comparison.
+  500000710 (Morgott's Cursed Sword) does not exist in comparison.
+  500000711 (Morgott's Cursed Sword) does not exist in comparison.
+  500000750 (Envoy's Horn - [Ash of War] Oracular Bubble - FP - Bullet) does not exist in comparison.
+  500000751 (Envoy's Horn - [Ash of War] Oracular Bubble) does not exist in comparison.
+  500000800 (Eclipse Shotel - [Ash of War] Death Flare - FP - Bullet) does not exist in comparison.
+  500000801 (Eclipse Shotel - [Ash of War] Death Flare) does not exist in comparison.
+  500000805 (Eclipse Shotel - [Ash of War] Death Flare - No FP - Attack) does not exist in comparison.
+  500000850 (Reduvia - [Ash of War] Reduvia Blood Blade) does not exist in comparison.
+  500000851 (Reduvia - [Ash of War] Reduvia Blood Blade - FP - Bullet) does not exist in comparison.
+  500000852 (Reduvia - [Ash of War] Reduvia Blood Blade - No FP - Hit) does not exist in comparison.
+  500000855 (Reduvia - [Ash of War] Reduvia Blood Blade) does not exist in comparison.
+  500000856 (Reduvia - [Ash of War] Reduvia Blood Blade - FP - Followup #1 - Bullet) does not exist in comparison.
+  500000857 (Reduvia - [Ash of War] Reduvia Blood Blade - No FP - Followup #1 - Hit) does not exist in comparison.
+  500000860 (Reduvia - [Ash of War] Reduvia Blood Blade) does not exist in comparison.
+  500000861 (Reduvia - [Ash of War] Reduvia Blood Blade - FP - Followup #2 - Bullet) does not exist in comparison.
+  500000862 (Reduvia - [Ash of War] Reduvia Blood Blade - No FP - Followup #2 - Hit) does not exist in comparison.
+  500000900 (Bloody Helice - [Ash of War] Dynast's Finesse - FP) does not exist in comparison.
+  500000901 (Bloody Helice - [Ash of War] Dynast's Finesse - FP - Thrust) does not exist in comparison.
+  500000902 (Bloody Helice - [Ash of War] Dynast's Finesse - FP - Thrust) does not exist in comparison.
+  500000903 (Bloody Helice - [Ash of War] Dynast's Finesse - FP - Slash) does not exist in comparison.
+  500000905 (Bloody Helice - [Ash of War] Dynast's Finesse - No FP) does not exist in comparison.
+  500000906 (Bloody Helice - [Ash of War] Dynast's Finesse - No FP - Thrust) does not exist in comparison.
+  500000907 (Bloody Helice - [Ash of War] Dynast's Finesse - No FP - Thrust) does not exist in comparison.
+  500000908 (Bloody Helice - [Ash of War] Dynast's Finesse - No FP - Slash) does not exist in comparison.
+  600000100:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000100 -> 300208920
+    [stamina]: 40 -> 0
+
+  600000101:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000101 -> 300208921
+    [stamina]: 40 -> 10
+
+  600000102:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200002170 -> 300208922
+    [stamina]: 20 -> 0
+    [category]: 0 -> 12
+
+  600000103:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000103 -> 300208923
+    [stamina]: 20 -> 10
+    [category]: 0 -> 12
+
+  600000105:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200002172 -> 300208924
+    [category]: 0 -> 12
+
+  600000106:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200002173 -> 300208925
+    [stamina]: 0 -> 12
+    [category]: 0 -> 12
+
+  600000107:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200002174 -> 300208926
+    [category]: 0 -> 12
+
+  600000108 (Regalia of Eochaid - [Ash of War] Eochaid's Dancing Blade - FP - Hit #3) does not exist in comparison.
+  600000150:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000150 -> 303020900
+    [stamina]: 50 -> 10
+
+  600000151 (Coil Shield - [Ash of War] Viper Bite - No FP - Hit) does not exist in comparison.
+  600000200:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200002370 -> 302006900
+    [stamina]: 30 -> 20
+    [category]: 0 -> 12
+
+  600000201:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000201 -> 302006901
+    [stamina]: 30 -> 10
+    [category]: 0 -> 12
+
+  600000202:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200002380 -> 302006902
+    [stamina]: 30 -> 10
+    [category]: 0 -> 12
+
+  600000203:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000203 -> 302006903
+    [stamina]: 30 -> 10
+    [category]: 0 -> 12
+
+  600000204 (Giant's Red Braid) does not exist in comparison.
+  600000210:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000210 -> 302006910
+    [stamina]: 26 -> 20
+    [category]: 0 -> 12
+
+  600000211:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000211 -> 302006911
+    [stamina]: 26 -> 10
+    [category]: 0 -> 12
+
+  600000212 (Giant's Red Braid) does not exist in comparison.
+  600000213 (Giant's Red Braid) does not exist in comparison.
+  600000214 (Giant's Red Braid) does not exist in comparison.
+  600000250 (Visage Shield - [Ash of War] Tongues of Fire - FP - Bullet) does not exist in comparison.
+  600000251 (Visage Shield - [Ash of War] Tongues of Fire) does not exist in comparison.
+  600000252 (Visage Shield - [Ash of War] Tongues of Fire) does not exist in comparison.
+  600000300 (Dragonscale Blade) does not exist in comparison.
+  600000301 (Dragonscale Blade) does not exist in comparison.
+  600000302 (Dragonscale Blade) does not exist in comparison.
+  600000303 does not exist in comparison.
+  600000350 (One-Eyed Shield - [Ash of War] Flame Spit - FP - Bullet) does not exist in comparison.
+  600000351 (One-Eyed Shield - [Ash of War] Flame Spit) does not exist in comparison.
+  600000400 (Scepter of the All-Knowing - [Ash of War] Knowledge Above All - FP) does not exist in comparison.
+  600000450 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - FP - Hit) does not exist in comparison.
+  600000451 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith) does not exist in comparison.
+  600000452 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith) does not exist in comparison.
+  600000455 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - FP - Followup - Bullet) does not exist in comparison.
+  600000460 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - FP - Bullet #1) does not exist in comparison.
+  600000461 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - FP - Bullet #2) does not exist in comparison.
+  600000462 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - FP - Bullet #3) does not exist in comparison.
+  600000463 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - FP - Bullet #4) does not exist in comparison.
+  600000464 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith) does not exist in comparison.
+  600000470 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - No FP - Hit #1) does not exist in comparison.
+  600000471 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - No FP - Hit #2) does not exist in comparison.
+  600000472 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - No FP - Hit #3) does not exist in comparison.
+  600000475 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith) does not exist in comparison.
+  600000480 (Cranial Vessel Candlestand - [Ash of War] Surge of Faith - No FP - Followup - Hit) does not exist in comparison.
+  600000500:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000500 -> 300729000
+    [stamina]: 36 -> 38
+
+  600000501:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 0 -> 1
+    [refId]: 600000502 -> 2860
+    [stamina]: 36 -> 0
+    [category]: 12 -> 1
+
+  600000502:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 200003270 -> 2862
+    [category]: 0 -> 1
+
+  600000503:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200003280 -> 300729003
+    [stamina]: 0 -> 15
+    [category]: 0 -> 12
+
+  600000504:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200003290 -> 300729004
+    [stamina]: 0 -> 12
+    [category]: 0 -> 12
+
+  600000505:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200003300 -> 300729005
+    [stamina]: 0 -> 40
+    [category]: 0 -> 12
+
+  600000506:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200003310 -> 300729006
+    [stamina]: 0 -> 20
+    [category]: 0 -> 12
+
+  600000507 (Magma Wyrm's Scalesword - [Ash of War] Magma Guillotine - No FP - Followup #2) does not exist in comparison.
+  600000550 (Erdtree Greatshield - [Ash of War] Golden Retaliation - FP - Bullet #1) does not exist in comparison.
+  600000551 (Erdtree Greatshield - [Ash of War] Golden Retaliation) does not exist in comparison.
+  600000555 (Erdtree Greatshield - [Ash of War] Golden Retaliation - FP - Bullet #2) does not exist in comparison.
+  600000556 (Erdtree Greatshield - [Ash of War] Golden Retaliation) does not exist in comparison.
+  600000600:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000600 -> 303400900
+    [stamina]: 10 -> 25
+
+  600000601:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 0 -> 1
+    [refId]: 600000601 -> 2360
+    [stamina]: 25 -> 0
+    [category]: 12 -> 1
+
+  600000605 (Bastard's Stars - [Ash of War] Nebula - No FP - Attack) does not exist in comparison.
+  600000700:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000700 -> 303400400
+    [stamina]: 40 -> 20
+
+  600000701:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000701 -> 303400401
+
+  600000705 (Sword of Milos - [Ash of War] Shriek of Milos - FP - Bullet) does not exist in comparison.
+  600000800:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200002340 -> 301702900
+    [stamina]: 0 -> 40
+
+  600000805 (Siluria's Tree - [Ash of War] Siluria's Tree) does not exist in comparison.
+  600000810:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 200002350 -> 2381
+
+  600000815 (Siluria's Tree - [Ash of War] Siluria's Tree - FP - Followup - Hit) does not exist in comparison.
+  600000820:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 0 -> 1
+    [refId]: 600000820 -> 2382
+
+  600000825:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000825 -> 301702925
+    [stamina]: 30 -> 40
+
+  600000830:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000830 -> 301702930
+    [stamina]: 7 -> 40
+
+  600000901:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 600000901 -> 300310901
+    [stamina]: 13 -> 70
+
+  600000905:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 0 -> 1
+    [refId]: 600000905 -> 4000
+    [stamina]: 13 -> 70
+
+  700000100:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000100 -> 300900200
+    [stamina]: 21 -> 0
+
+  700000101:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000101 -> 300900205
+    [stamina]: 21 -> 13
+
+  700000102:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000102 -> 300900206
+    [stamina]: 21 -> 13
+
+  700000103:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000103 -> 300900207
+    [stamina]: 21 -> 13
+
+  700000104:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000104 -> 300900208
+    [stamina]: 18 -> 13
+
+  700000105:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000105 -> 300900209
+    [stamina]: 15 -> 13
+
+  700000106:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000106 -> 300900210
+    [stamina]: 15 -> 13
+
+  700000107 (Hand of Malenia) does not exist in comparison.
+  700000108 (Hand of Malenia) does not exist in comparison.
+  700000109 (Hand of Malenia) does not exist in comparison.
+  700000110:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000110 -> 300900214
+    [stamina]: 21 -> 13
+
+  700000111:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000111 -> 300900215
+    [stamina]: 21 -> 13
+
+  700000112:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000112 -> 300900216
+    [stamina]: 21 -> 13
+
+  700000113:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000113 -> 300900217
+    [stamina]: 21 -> 13
+
+  700000114:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000114 -> 300900218
+    [stamina]: 18 -> 13
+
+  700000115:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000115 -> 300900219
+    [stamina]: 15 -> 13
+
+  700000116:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000116 -> 300900220
+    [stamina]: 15 -> 13
+
+  700000117 (Hand of Malenia) does not exist in comparison.
+  700000118 (Hand of Malenia) does not exist in comparison.
+  700000120:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 1 -> 0
+    [refId]: 200003130 -> 300900201
+
+  700000200 (Vyke's War Spear) does not exist in comparison.
+  700000201 (Vyke's War Spear) does not exist in comparison.
+  700000202 (Vyke's War Spear) does not exist in comparison.
+  700000205 (Vyke's War Spear) does not exist in comparison.
+  700000206 (Vyke's War Spear) does not exist in comparison.
+  700000207 (Vyke's War Spear) does not exist in comparison.
+  700000220:
+    [refType]: 1 -> 0
+    [refId]: 200003200 -> 301705920
+    [stamina]: 15 -> 0
+
+  700000225 (Vyke's War Spear) does not exist in comparison.
+  700000300:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000300 -> 300306900
+    [stamina]: 10 -> 50
+
+  700000305 (Ordovis's Greatsword - [Ash of War] Ordovis's Vortex - FP - Bullet) does not exist in comparison.
+  700000306 (Ordovis's Greatsword) does not exist in comparison.
+  700000307 (Ordovis's Greatsword) does not exist in comparison.
+  700000310:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000310 -> 300306910
+    [stamina]: 22 -> 35
+
+  700000315:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refType]: 0 -> 1
+    [refId]: 700000315 -> 2783
+    [stamina]: 6 -> 0
+
+  700000320:
+    [ezStateBehaviorType_old]: 0 -> 1
+    [refId]: 700000320 -> 300306920
+    [stamina]: 6 -> 50
+
+  700000325 (Ordovis's Greatsword - [Ash of War] Ordovis's Vortex - No FP - Followup - Hit) does not exist in comparison.
+  700000400:
+    [refType]: 1 -> 0
+    [refId]: 200003250 -> 303400300
+    [stamina]: 0 -> 14
+    [category]: 0 -> 12
+
+  700000401:
+    [refId]: 700000401 -> 303400301
+    [stamina]: 40 -> 14
+
+  700000402:
+    [refId]: 700000402 -> 303400302
+    [stamina]: 40 -> 14
+
+  700000403 (Rivers of Blood - [Ash of War] Corpse Piler - FP - Followup - Slash #2) does not exist in comparison.
+  700000404 (Rivers of Blood - [Ash of War] Corpse Piler - FP - Followup - Slash #3) does not exist in comparison.
+  700000405 (Rivers of Blood - [Ash of War] Corpse Piler - FP - Final Slash) does not exist in comparison.
+  700000410:
+    [refId]: 700000410 -> 303400310
+    [stamina]: 40 -> 14
+
+  700000411:
+    [refId]: 700000411 -> 303400311
+    [stamina]: 40 -> 14
+    [category]: 2 -> 12
+
+  700000412 (Rivers of Blood - [Ash of War] Corpse Piler - No FP - Followup - Slash #1) does not exist in comparison.
+  700000413 (Rivers of Blood - [Ash of War] Corpse Piler - No FP - Followup - Slash #2) does not exist in comparison.
+  700000414 (Rivers of Blood - [Ash of War] Corpse Piler - No FP - Followup - Slash #3) does not exist in comparison.
+  700000415:
+    [refId]: 700000415 -> 303400315
+    [stamina]: 40 -> 20
+
+  700000500 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Slam - Hit #1) does not exist in comparison.
+  700000501 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Slam - Hit #2) does not exist in comparison.
+  700000502 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Followup #1 - Hit #1) does not exist in comparison.
+  700000503 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Followup #1 - Hit #2) does not exist in comparison.
+  700000504 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Followup #1 - Hit #3) does not exist in comparison.
+  700000505 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Slam - Hit #1) does not exist in comparison.
+  700000506 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Slam - Hit #2) does not exist in comparison.
+  700000507 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Followup #1 - Hit #1) does not exist in comparison.
+  700000508 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Followup #1 - Hit #2) does not exist in comparison.
+  700000509 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Followup #1 - Hit #3) does not exist in comparison.
+  700000510 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Final - Hit #1) does not exist in comparison.
+  700000511 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Final - Hit #2) does not exist in comparison.
+  700000512 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Followup #2 - Hit #1) does not exist in comparison.
+  700000513 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Followup #2 - Hit #3) does not exist in comparison.
+  700000514 (Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Followup #2 - Hit #4) does not exist in comparison.
+  700000515 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Final - Hit #1) does not exist in comparison.
+  700000516 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Final - Hit #2) does not exist in comparison.
+  700000517 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Followup #2 - Hit #1) does not exist in comparison.
+  700000518 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Followup #2 - Hit #2) does not exist in comparison.
+  700000519 (Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Followup #2 - Hit #3) does not exist in comparison.
+  700000600 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #1) does not exist in comparison.
+  700000601 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #2) does not exist in comparison.
+  700000602 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #3) does not exist in comparison.
+  700000603 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #4) does not exist in comparison.
+  700000604 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #5) does not exist in comparison.
+  700000610 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Leap) does not exist in comparison.
+  700000615 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - No FP - Hit #1) does not exist in comparison.
+  700000616 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - No FP - Hit #2) does not exist in comparison.
+  700000617 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - No FP - Hit #3) does not exist in comparison.
+  700000618 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - No FP - Hit #4) does not exist in comparison.
+  700000619 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - No FP - Hit #5) does not exist in comparison.
+  700000620 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Followup - Hit #1) does not exist in comparison.
+  700000621 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Followup - Hit #2) does not exist in comparison.
+  700000625 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - No FP - Followup - Hit #1) does not exist in comparison.
+  700000626 (Eleonora's Poleblade - [Ash of War] Bloodblade Dance - No FP - Followup - Hit #2) does not exist in comparison.
+  700000650 (Halo Scythe) does not exist in comparison.
+  700000651 (Halo Scythe) does not exist in comparison.
+  700000652 (Halo Scythe) does not exist in comparison.
+  700000655 (Halo Scythe) does not exist in comparison.
+  700000660 (Halo Scythe) does not exist in comparison.
+  700000661 (Halo Scythe) does not exist in comparison.
+  700000662 (Halo Scythe) does not exist in comparison.
+  700000665 (Halo Scythe) does not exist in comparison.
+  700000670 (Halo Scythe) does not exist in comparison.
+  700000671 (Halo Scythe) does not exist in comparison.
+  700000672 (Halo Scythe) does not exist in comparison.
+  700000675 (Halo Scythe) does not exist in comparison.
+  700000700 (Bloodhound's Fang - [Ash of War] Bloodhound's Finesse - FP - Sweep) does not exist in comparison.
+  700000701 (Bloodhound's Fang - [Ash of War] Bloodhound's Finesse - FP - Forward Dash Slash) does not exist in comparison.
+  700000705 (Bloodhound's Fang - [Ash of War] Bloodhound's Finesse - No FP - Sweep) does not exist in comparison.
+  700000706 (Bloodhound's Fang - [Ash of War] Bloodhound's Finesse - No FP - Forward Dash Slash) does not exist in comparison.
+  700000750 (Bolt of Gransax) does not exist in comparison.
+  700000751 (Bolt of Gransax) does not exist in comparison.
+  700000800 (Godslayer's Greatsword - [Ash of War] The Queen's Black Flame - FP - Slash #2) does not exist in comparison.
+  700000801 (Godslayer's Greatsword - [Ash of War] The Queen's Black Flame - FP - Slash #1) does not exist in comparison.
+  700000805 (Godslayer's Greatsword - [Ash of War] The Queen's Black Flame - FP - Followup) does not exist in comparison.
+  700000810 (Godslayer's Greatsword - [Ash of War] The Queen's Black Flame - No FP - Slash #2) does not exist in comparison.
+  700000811 (Godslayer's Greatsword) does not exist in comparison.
+  700000815 (Godslayer's Greatsword - [Ash of War] The Queen's Black Flame - No FP - Followup) does not exist in comparison.
+  700000850 (Death's Poker) does not exist in comparison.
+  700000851 (Death's Poker) does not exist in comparison.
+  700000852 (Death's Poker) does not exist in comparison.
+  700000853 (Death's Poker) does not exist in comparison.
+  700000854 (Death's Poker) does not exist in comparison.
+  700000855 (Death's Poker) does not exist in comparison.
+  700000856 (Death's Poker) does not exist in comparison.
+  700000857 (Death's Poker) does not exist in comparison.
+  700000858 (Death's Poker) does not exist in comparison.
+  700000900 (Dragon King's Cragblade) does not exist in comparison.
+  700000901 (Dragon King's Cragblade) does not exist in comparison.
+  700000950 (Ringed Finger) does not exist in comparison.
+  700000951 (Ringed Finger) does not exist in comparison.
+  700000955 (Ringed Finger) does not exist in comparison.
+  700000956 (Ringed Finger) does not exist in comparison.
+  800000100 (Helphen's Steeple) does not exist in comparison.
+  800000150 (Beastclaw Greathammer) does not exist in comparison.
+  800000151 (Beastclaw Greathammer) does not exist in comparison.
+  800000155 (Beastclaw Greathammer) does not exist in comparison.
+  800000200 (St. Trina's Torch - [Ash of War] Fires of Slumber - FP - Bullet) does not exist in comparison.
+  800000201 (St. Trina's Torch - [Ash of War] Fires of Slumber - No FP - Bullet) does not exist in comparison.
+  800000300 (Fallingstar Beast Jaw - [Ash of War] Gravity Bolt) does not exist in comparison.
+  800000305 (Fallingstar Beast Jaw - [Ash of War] Gravity Bolt - FP - bullet) does not exist in comparison.
+  800000315 (Fallingstar Beast Jaw - [Ash of War] Gravity Bolt - No FP - Hit) does not exist in comparison.
+  800000325 (Fallingstar Beast Jaw - [Ash of War] Gravity Bolt - No FP - Hit) does not exist in comparison.
+  800000350 (Onyx Lord's Greatsword) does not exist in comparison.
+  800000351 (Onyx Lord's Greatsword) does not exist in comparison.
+  800000352 (Onyx Lord's Greatsword) does not exist in comparison.
+  800000353 (Onyx Lord's Greatsword) does not exist in comparison.
+  800000354 (Onyx Lord's Greatsword) does not exist in comparison.
+  800000400 (Staff of the Avatar/Rotten Staff - [Ash of War] Erdtree Slam - FP - Hit #1) does not exist in comparison.
+  800000401 (Staff of the Avatar/Rotten Staff - [Ash of War] Erdtree Slam - FP - Hit #2) does not exist in comparison.
+  800000402 (Staff of the Avatar/Rotten Staff - [Ash of War] Erdtree Slam - FP - Hit #3) does not exist in comparison.
+  800000405 (Staff of the Avatar/Rotten Staff - [Ash of War] Erdtree Slam - No FP - Hit #1) does not exist in comparison.
+  800000406 (Staff of the Avatar/Rotten Staff - [Ash of War] Erdtree Slam - No FP - Hit #2) does not exist in comparison.
+  800000450 (Onyx Lord's Sword) does not exist in comparison.
+  800000451 (Onyx Lord's Sword) does not exist in comparison.
+  800000452 (Onyx Lord's Sword) does not exist in comparison.
+  800000453 (Onyx Lord's Sword) does not exist in comparison.
+  800000454 (Onyx Lord's Sword) does not exist in comparison.
+  800000500 (Watchdog's Staff - [Ash of War] Sorcery of the Crozier - FP - Bullet) does not exist in comparison.
+  800000505 (Watchdog's Staff - [Ash of War] Sorcery of the Crozier - No FP - Bullet) does not exist in comparison.
+  800000550 (Ghiza's Wheel) does not exist in comparison.
+  800000551 (Ghiza's Wheel) does not exist in comparison.
+  800000552 (Ghiza's Wheel) does not exist in comparison.
+  800000553 (Ghiza's Wheel) does not exist in comparison.
+  800000554 (Ghiza's Wheel) does not exist in comparison.
+  800000555 (Ghiza's Wheel) does not exist in comparison.
+  800000556 (Ghiza's Wheel) does not exist in comparison.
+  800000557 (Ghiza's Wheel) does not exist in comparison.
+  800000600 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt - FP - Hit #1) does not exist in comparison.
+  800000601 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt - FP - Followup - Hit) does not exist in comparison.
+  800000605 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt) does not exist in comparison.
+  800000650 (Blade of Calling) does not exist in comparison.
+  800000651 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt - FP - Followup - Hit) does not exist in comparison.
+  800000655 (Blade of Calling) does not exist in comparison.
+  800000670 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt - No FP - Hit) does not exist in comparison.
+  800000671 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt - No FP - Followup - Hit) does not exist in comparison.
+  800000675 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt) does not exist in comparison.
+  800000700 (Cleanrot Spear - [Ash of War] Sacred Phalanx - FP - Slash) does not exist in comparison.
+  800000701 (Cleanrot Spear - [Ash of War] Sacred Phalanx - FP - Bullet) does not exist in comparison.
+  800000702 (Cleanrot Spear - [Ash of War] Sacred Phalanx) does not exist in comparison.
+  800000703 (Cleanrot Spear - [Ash of War] Sacred Phalanx) does not exist in comparison.
+  800000705 (Cleanrot Spear - [Ash of War] Sacred Phalanx - No FP - Slash) does not exist in comparison.
+  800000750 (Black Knife) does not exist in comparison.
+  800000755 (Black Knife) does not exist in comparison.
+  800000800 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Spin #1) does not exist in comparison.
+  800000801 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Spin #2) does not exist in comparison.
+  800000802 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Spin #3) does not exist in comparison.
+  800000805 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Bullet #1) does not exist in comparison.
+  800000806 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Bullet #2) does not exist in comparison.
+  800000807 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Bullet #3) does not exist in comparison.
+  800000810 (Stormhawk Axe - [Ash of War] Thunderstorm - No FP - Spin #1) does not exist in comparison.
+  800000811 (Stormhawk Axe - [Ash of War] Thunderstorm - No FP - Spin #2) does not exist in comparison.
+  800000812 (Stormhawk Axe - [Ash of War] Thunderstorm - No FP - Spin #3) does not exist in comparison.
+  800000815 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Followup - Spin #1) does not exist in comparison.
+  800000816 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Followup - Spin #2) does not exist in comparison.
+  800000820 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Followup - Bullet #1) does not exist in comparison.
+  800000821 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Followup - Bullet #2) does not exist in comparison.
+  800000825 (Stormhawk Axe - [Ash of War] Thunderstorm - No FP - Followup - Spin #1) does not exist in comparison.
+  800000826 (Stormhawk Axe - [Ash of War] Thunderstorm - No FP - Followup - Spin #2) does not exist in comparison.
+  800000830 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Final - Spin #1) does not exist in comparison.
+  800000831 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Final - Spin #2) does not exist in comparison.
+  800000835 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Final - Bullet #1) does not exist in comparison.
+  800000836 (Stormhawk Axe - [Ash of War] Thunderstorm - FP - Final - Bullet #2) does not exist in comparison.
+  800000840 (Stormhawk Axe - [Ash of War] Thunderstorm - No FP - Final - Spin #1) does not exist in comparison.
+  800000841 (Stormhawk Axe - [Ash of War] Thunderstorm - No FP - Final - Spin #2) does not exist in comparison.
+  800000850 (Nox Flowing Hammer) does not exist in comparison.
+  800000851 (Nox Flowing Hammer) does not exist in comparison.
+  800000855 (Nox Flowing Hammer) does not exist in comparison.
+  800000856 (Nox Flowing Hammer) does not exist in comparison.
+  800000900 (Rosus' Axe - [Ash of War] Rosus's Summons - FP - Bullet #1) does not exist in comparison.
+  800000901 (Rosus' Axe - [Ash of War] Rosus's Summons) does not exist in comparison.
+  800000902 (Rosus' Axe - [Ash of War] Rosus's Summons) does not exist in comparison.
+  800000903 (Rosus' Axe - [Ash of War] Rosus's Summons) does not exist in comparison.
+  800000904 (Rosus' Axe - [Ash of War] Rosus's Summons) does not exist in comparison.
+  800000910 (Rosus' Axe - [Ash of War] Rosus's Summons - FP - Bullet #2) does not exist in comparison.
+  800000911 (Rosus' Axe - [Ash of War] Rosus's Summons) does not exist in comparison.
+  800000940 (Rosus' Axe - [Ash of War] Rosus's Summons - FP - Slam) does not exist in comparison.
+  800000945 (Rosus' Axe - [Ash of War] Rosus's Summons - No FP - Slam) does not exist in comparison.
+  800000950 (Ruins Greatsword) does not exist in comparison.
+  800000951 (Ruins Greatsword) does not exist in comparison.
+  800000955 (Ruins Greatsword) does not exist in comparison.
+  900000100 (Family Heads - [Ash of War] Familal Rancor - FP - Bullet #1) does not exist in comparison.
+  900000101 (Family Heads - [Ash of War] Familal Rancor) does not exist in comparison.
+  900000102 (Family Heads - [Ash of War] Familal Rancor - FP - Bullet #2) does not exist in comparison.
+  900000103 (Family Heads - [Ash of War] Familal Rancor) does not exist in comparison.
+  900000104 (Family Heads - [Ash of War] Familal Rancor - FP - Bullet #3) does not exist in comparison.
+  900000105 (Family Heads - [Ash of War] Familal Rancor) does not exist in comparison.
+  900000150 (Starscourge Greatsword) does not exist in comparison.
+  900000151 (Starscourge Greatsword) does not exist in comparison.
+  900000152 (Starscourge Greatsword) does not exist in comparison.
+  900000153 (Starscourge Greatsword) does not exist in comparison.
+  900000154 (Starscourge Greatsword) does not exist in comparison.
+  900000160 (Starscourge Greatsword) does not exist in comparison.
+  900000161 (Starscourge Greatsword) does not exist in comparison.
+  900000165 (Starscourge Greatsword) does not exist in comparison.
+  900000170 (Starscourge Greatsword) does not exist in comparison.
+  900000171 (Starscourge Greatsword) does not exist in comparison.
+  900000200 (Devourer's Scepter - [Ash of War] Devourer of Worlds - FP - Bullet) does not exist in comparison.
+  900000201 (Devourer's Scepter - [Ash of War] Devourer of Worlds - No FP - Bullet) does not exist in comparison.
+  900000255 (Axe of Godfrey) does not exist in comparison.
+  900000256 does not exist in comparison.
+  900000259 does not exist in comparison.
+  900000260 (Axe of Godfrey) does not exist in comparison.
+  900000300 (Magma Blade - [Ash of War] Magma Shower - FP - Slash) does not exist in comparison.
+  900000301 (Magma Blade - [Ash of War] Magma Shower - FP - Followup #1) does not exist in comparison.
+  900000302 (Magma Blade - [Ash of War] Magma Shower - FP - Followup #2) does not exist in comparison.
+  900000303 (Magma Blade - [Ash of War] Magma Shower) does not exist in comparison.
+  900000304 (Magma Blade - [Ash of War] Magma Shower) does not exist in comparison.
+  900000305 (Magma Blade - [Ash of War] Magma Shower) does not exist in comparison.
+  900000306 (Magma Blade - [Ash of War] Magma Shower - FP - Bullet) does not exist in comparison.
+  900000307 (Magma Blade - [Ash of War] Magma Shower) does not exist in comparison.
+  900000350 (Axe of Godrick) does not exist in comparison.
+  900000355 (Axe of Godrick) does not exist in comparison.
+  900000356 (Axe of Godrick) does not exist in comparison.
+  900000357 (Axe of Godrick) does not exist in comparison.
+  900000358 (Axe of Godrick) does not exist in comparison.
+  900000360 (Axe of Godrick) does not exist in comparison.
+  900000365 (Axe of Godrick) does not exist in comparison.
+  900000366 (Axe of Godrick) does not exist in comparison.
+  900000367 (Axe of Godrick) does not exist in comparison.
+  900000368 (Axe of Godrick) does not exist in comparison.
+  900000370 (Axe of Godrick) does not exist in comparison.
+  900000375 (Axe of Godrick) does not exist in comparison.
+  900000376 (Axe of Godrick) does not exist in comparison.
+  900000377 (Axe of Godrick) does not exist in comparison.
+  900000378 (Axe of Godrick) does not exist in comparison.
+  900000380 (Axe of Godrick) does not exist in comparison.
+  900000385 (Axe of Godrick) does not exist in comparison.
+  900000390 (Axe of Godrick) does not exist in comparison.
+  900000450 (Marika's Hammer) does not exist in comparison.
+  900000451 (Marika's Hammer) does not exist in comparison.
+  900000460 (Marika's Hammer) does not exist in comparison.
+  900000461 (Marika's Hammer) does not exist in comparison.
+  900000462 (Marika's Hammer) does not exist in comparison.
+  900000463 (Marika's Hammer) does not exist in comparison.
+  900000465 (Marika's Hammer) does not exist in comparison.
+  900000500 (Zamor Curved Sword - [Ash of War] Zamor Ice Storm - FP - Bullet) does not exist in comparison.
+  900000501 (Zamor Curved Sword - [Ash of War] Zamor Ice Storm - FP - Slam) does not exist in comparison.
+  900000502 (Zamor Curved Sword - [Ash of War] Zamor Ice Storm - No FP - Slam) does not exist in comparison.
+  900000550 (Royal Greatsword) does not exist in comparison.
+  900000555 (Royal Greatsword) does not exist in comparison.
+  900000560 (Royal Greatsword) does not exist in comparison.
+  900000561 (Royal Greatsword) does not exist in comparison.
+  900000565 (Royal Greatsword) does not exist in comparison.
+  900000600 (Gargoyle's Blackblade - [Ash of War] Corpse Wax Cutter - FP - Bullet) does not exist in comparison.
+  900000601 (Gargoyle's Blackblade - [Ash of War] Corpse Wax Cutter - No FP - Slam) does not exist in comparison.
+  900000655 (Death Ritual Spear) does not exist in comparison.
+  900000660 (Death Ritual Spear) does not exist in comparison.
+  900000700 (Coded Sword - [Ash of War] Unblockable Blade - FP - Hit) does not exist in comparison.
+  900000701 (Coded Sword - [Ash of War] Unblockable Blade - No FP - Hit) does not exist in comparison.
+  900000750 (Sword of St. Trina) does not exist in comparison.
+  900000751 (Sword of St. Trina) does not exist in comparison.
+  900000752 (Sword of St. Trina) does not exist in comparison.
+  900000800 (Golden Epitaph) does not exist in comparison.
+  900000850 (Golden Order Greatsword) does not exist in comparison.
+  900000855 (Golden Order Greatsword) does not exist in comparison.
+  900000856 (Golden Order Greatsword) does not exist in comparison.
+  900000860 (Golden Order Greatsword) does not exist in comparison.
+  900000861 (Golden Order Greatsword) does not exist in comparison.
+  900000862 (Golden Order Greatsword) does not exist in comparison.
+  900000865 (Golden Order Greatsword) does not exist in comparison.
+  900000866 (Golden Order Greatsword) does not exist in comparison.
+  900000950 (Glintstone Kris) does not exist in comparison.
+  900000951 (Glintstone Kris) does not exist in comparison.
+  900000955 (Glintstone Kris) does not exist in comparison.
+  900000956 (Glintstone Kris) does not exist in comparison.
+  900000960 (Glintstone Kris) does not exist in comparison.
+  900000961 (Glintstone Kris) does not exist in comparison.
+  900000962 (Glintstone Kris) does not exist in comparison.
+[-- EquipParamGem --]
+  85001 (Destined Death) does not exist in comparison.
+  85002 (Angel's Wings) does not exist in comparison.
+  85003 (Great Oracular Bubble) does not exist in comparison.
+  85004 (Night-and-Flame Stance) does not exist in comparison.
+  85005 (Taker's Flames) does not exist in comparison.
+  85006 (Transient Moonlight) does not exist in comparison.
+  85007 (Bloodboon Ritual) does not exist in comparison.
+  85008 (Cursed-Blood Slice) does not exist in comparison.
+  85010 (Death Flare) does not exist in comparison.
+  85011 (Dynast's Finesse) does not exist in comparison.
+  85012 (Eochaid's Dancing Blade) does not exist in comparison.
+  85013 (Flame Dance) does not exist in comparison.
+  85014 (Ice Lightning Sword) does not exist in comparison.
+  85015 (Knowledge Above All) does not exist in comparison.
+  85016 (Magma Guillotine) does not exist in comparison.
+  85017 (Nebula) does not exist in comparison.
+  85018 (Shriek of Milos) does not exist in comparison.
+  85019 (Siluria's Woe) does not exist in comparison.
+  85020 (Wave of Gold) does not exist in comparison.
+  85021 (Waterfowl Dance) does not exist in comparison.
+  85022 (Frenzyflame Thrust) does not exist in comparison.
+  85023 (Ordovis's Vortex) does not exist in comparison.
+  85024 (Corpse Piler) does not exist in comparison.
+  85025 (Storm Kick) does not exist in comparison.
+  85026 (Bloodblade Dance) does not exist in comparison.
+  85027 (Bloodhound's Finesse) does not exist in comparison.
+  85028 (The Queen's Black Flame) does not exist in comparison.
+  85029 (Thundercloud Form) does not exist in comparison.
+  85030 (Ruinous Ghostflame) does not exist in comparison.
+  85031 (Fires of Slumber) does not exist in comparison.
+  85032 (Gravity Bolt) does not exist in comparison.
+  85033 (Erdtree Slam) does not exist in comparison.
+  85034 (Sorcery of the Crozier) does not exist in comparison.
+  85035 (Great-Serpent Hunt) does not exist in comparison.
+  85036 (Sacred Phalanx) does not exist in comparison.
+  85037 (Thunderstorm) does not exist in comparison.
+  85038 (Rosus's Summons) does not exist in comparison.
+  85039 (Familial Rancor) does not exist in comparison.
+  85040 (Devourer of Worlds) does not exist in comparison.
+  85041 (MOONVEIL DUPE) does not exist in comparison.
+  85042 (Magma Shower) does not exist in comparison.
+  85043 (Radahn's Rain) does not exist in comparison.
+  85044 (Zamor Ice Storm) does not exist in comparison.
+  85045 (Corpse Wax Cutter) does not exist in comparison.
+  85046 (Unblockable Blade) does not exist in comparison.
+  85047 (Last Rites) does not exist in comparison.
+  85048 (Golden Tempering) does not exist in comparison.
+  85049 (Miquella's Ring of Light) does not exist in comparison.
+  85050 (Ancient Lightning Spear ) does not exist in comparison.
+  85051 (Ghostflame Ignition) does not exist in comparison.
+  85052 (Claw Flick) does not exist in comparison.
+  85053 (Regal Beastclaw) does not exist in comparison.
+  85054 (Oath of Vengeance) does not exist in comparison.
+  85055 (Onyx Lord's Repulsion) does not exist in comparison.
+  85056 (Alabaster Lord's Pull) does not exist in comparison.
+  85057 (Spinning Wheel) does not exist in comparison.
+  85058 (Blade of Gold) does not exist in comparison.
+  85059 (Blade of Death) does not exist in comparison.
+  85060 (Flowing Form (Hammer)) does not exist in comparison.
+  85061 (Flowing Form (Sword) DOESNT HAVE ANYTHING) does not exist in comparison.
+  85062 (Wave of Destruction) does not exist in comparison.
+  85063 (Starcaller Cry) does not exist in comparison.
+  85064 (Regal Roar) does not exist in comparison.
+  85065 (I Command Thee, Kneel!) does not exist in comparison.
+  85066 (Gold Breaker) does not exist in comparison.
+  85067 (Wolf's Assault) does not exist in comparison.
+  85068 (Spearcall Ritual) does not exist in comparison.
+  85069 (Mists of Slumber) does not exist in comparison.
+  85070 (Establish Order) does not exist in comparison.
+  85071 (Glintstone Dart) does not exist in comparison.
+  85072 (Firebreather) does not exist in comparison.
+  85073 (Soul Stifler) does not exist in comparison.
+  85074 (Bear Witness!) does not exist in comparison.
+  85075 (Rallying Standard) does not exist in comparison.
+  85076 (Moonlight Greatsword) does not exist in comparison.
+  85077 (Sea of Magma) does not exist in comparison.
+  85078 (Bubble Shower) does not exist in comparison.
+  85079 (Oracular Bubble) does not exist in comparison.
+  85080 (Reduvia Blood Blade) does not exist in comparison.
+  85081 (Contagious Fury) does not exist in comparison.
+  85082 (Golden Retaliation) does not exist in comparison.
+  85083 (Viper Bite) does not exist in comparison.
+  85084 (Tongues of Fire) does not exist in comparison.
+  85085 (Flame Spit) does not exist in comparison.
+  85086 (Surge of Faith) does not exist in comparison.
+[-- ShopLineupParam_Recipe --]
+  32500 (Destined Death) does not exist in comparison.
+  32501 (Night-and-Flame Stance) does not exist in comparison.
+  32502 (Angel's Wings) does not exist in comparison.
+  32503 (Great Oracular Bubble) does not exist in comparison.
+  32504 (Taker's Flames) does not exist in comparison.
+  32505 (Transient Moonlight) does not exist in comparison.
+  32506 (Bloodboon Ritual) does not exist in comparison.
+  32507 (Cursed-Blood Slice) does not exist in comparison.
+  32508 (Death Flare) does not exist in comparison.
+  32509 (Dynast's Finesse) does not exist in comparison.
+  32510 (Eochaid's Dancing Blade) does not exist in comparison.
+  32511 (Flame Dance) does not exist in comparison.
+  32512 (Ice Lightning Sword) does not exist in comparison.
+  32513 (Knowledge Above All) does not exist in comparison.
+  32514 (Magma Guillotine) does not exist in comparison.
+  32515 (Nebula) does not exist in comparison.
+  32516 (Shriek of Milos) does not exist in comparison.
+  32517 (Siluria's Woe) does not exist in comparison.
+  32518 (Wave of Gold) does not exist in comparison.
+  32519 (Waterfowl Dance) does not exist in comparison.
+  32520 (Frenzyflame Thrust) does not exist in comparison.
+  32521 (Ordovis's Vortex) does not exist in comparison.
+  32522 (Corpse Piler) does not exist in comparison.
+  32523 (Storm Kick) does not exist in comparison.
+  32524 (Bloodblade Dance) does not exist in comparison.
+  32525 (Bloodhound's Finesse) does not exist in comparison.
+  32526 (The Queen's Black Flame) does not exist in comparison.
+  32527 (Thundercloud Form) does not exist in comparison.
+  32528 (Ruinous Ghostflame) does not exist in comparison.
+  32530 (Gravity Bolt) does not exist in comparison.
+  32531 (Erdtree Slam) does not exist in comparison.
+  32532 (Sorcery of the Crozier) does not exist in comparison.
+  32533 (Great-Serpent Hunt) does not exist in comparison.
+  32534 (Sacred Phalanx) does not exist in comparison.
+  32535 (Thunderstorm) does not exist in comparison.
+  32536 (Rosus's Summons) does not exist in comparison.
+  32537 (Familial Rancor) does not exist in comparison.
+  32538 (Devourer of Worlds) does not exist in comparison.
+  32539 (Magma Shower) does not exist in comparison.
+  32541 (Zamor Ice Storm) does not exist in comparison.
+  32542 (Corpse Wax Cutter) does not exist in comparison.
+  32543 (Unblockable Blade) does not exist in comparison.
+  32544 (Last Rites) does not exist in comparison.
+  32545 (Golden Tempering) does not exist in comparison.
+  32546 (Miquella's Ring of Light) does not exist in comparison.
+  32547 (Ancient Lightning Spear ) does not exist in comparison.
+  32548 (Ghostflame Ignition) does not exist in comparison.
+  32549 (Claw Flick) does not exist in comparison.
+  32550 (Regal Beastclaw) does not exist in comparison.
+  32551 (Oath of Vengeance) does not exist in comparison.
+  32552 (Onyx Lord's Repulsion) does not exist in comparison.
+  32553 (Alabaster Lord's Pull) does not exist in comparison.
+  32554 (Spinning Wheel) does not exist in comparison.
+  32555 (Blade of Gold) does not exist in comparison.
+  32556 (Blade of Death) does not exist in comparison.
+  32557 (Flowing Form (Hammer)) does not exist in comparison.
+  32559 (Wave of Destruction) does not exist in comparison.
+  32560 (Starcaller Cry) does not exist in comparison.
+  32561 (Regal Roar) does not exist in comparison.
+  32562 (I Command Thee, Kneel!) does not exist in comparison.
+  32563 (Gold Breaker) does not exist in comparison.
+  32564 (Wolf's Assault) does not exist in comparison.
+  32565 (Spearcall Ritual) does not exist in comparison.
+  32566 (Mists of Slumber) does not exist in comparison.
+  32567 (Establish Order) does not exist in comparison.
+  32568 (Glintstone Dart) does not exist in comparison.
+  32569 (Firebreather) does not exist in comparison.
+  32570 (Soul Stifler) does not exist in comparison.
+  32571 (Bear Witness!) does not exist in comparison.
+  32572 (Rallying Standard) does not exist in comparison.
+  32573 (Moonlight Greatsword) does not exist in comparison.
+  32574 (Sea of Magma) does not exist in comparison.
+  32575 (Bubble Shower) does not exist in comparison.
+  32576 (Oracular Bubble) does not exist in comparison.
+  32577 (Reduvia Blood Blade) does not exist in comparison.
+  32578 (Surge of Faith) does not exist in comparison.
+  32581 (Contagious Fury) does not exist in comparison.
+  32583 (Golden Retaliation) does not exist in comparison.
