@@ -10,6 +10,22 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 import os
 
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad
+from Crypto.Random import get_random_bytes
+
+
+
+ER_REGULATION_KEY = bytes([
+    0x99, 0xBF, 0xFC, 0x36, 0x6A, 0x6B, 0xC8, 0xC6,
+    0xF5, 0x82, 0x7D, 0x09, 0x36, 0x02, 0xD6, 0x76,
+    0xC4, 0x28, 0x92, 0xA0, 0x1C, 0x20, 0x7F, 0xB0,
+    0x24, 0xD3, 0xAF, 0x4E, 0x49, 0x3F, 0xEF, 0x99
+])
+
+BLOCK_SIZE = 16
+
+
 # Elden Ring regulation.bin encryption key
 ER_REGULATION_KEY = bytes([
     0x99, 0xBF, 0xFC, 0x36, 0x6A, 0x6B, 0xC8, 0xC6,
@@ -123,6 +139,53 @@ def encrypt_regulation(input_path, output_path=None):
         f.write(iv + encrypted)
 
     return output_path
+
+
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad
+from Crypto.Random import get_random_bytes
+
+BLOCK_SIZE = 16
+
+
+def encrypt_byte_array(key: bytes, secret: bytes, fixed_iv: bytes | None = None) -> bytes:
+    """
+    Mirrors SFUtil.EncryptByteArray exactly.
+    Returns IV (16 bytes) + encrypted content.
+    """
+    if len(key) != 32:
+        raise ValueError("Key must be 32 bytes (AES-256).")
+
+    iv = fixed_iv if fixed_iv is not None else get_random_bytes(16)
+
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    encrypted_content = cipher.encrypt(pad(secret, BLOCK_SIZE))
+
+    return iv + encrypted_content
+
+
+def decrypt_byte_array(key: bytes, secret: bytes) -> bytes:
+    """
+    Mirrors SFUtil.DecryptByteArray exactly.
+    DOES NOT remove padding (matches PaddingMode.None).
+    """
+    if len(key) != 32:
+        raise ValueError("Key must be 32 bytes (AES-256).")
+
+    iv = secret[:16]
+    encrypted_content = secret[16:]
+
+    # SoulsFormats pads to block boundary if needed
+    remainder = len(encrypted_content) % BLOCK_SIZE
+    if remainder != 0:
+        encrypted_content += b"\x00" * (BLOCK_SIZE - remainder)
+
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    decrypted = cipher.decrypt(encrypted_content)
+
+    return decrypted
+
+
 
 def main():
 
