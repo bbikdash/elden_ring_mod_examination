@@ -3,18 +3,44 @@ Minimal Elden Ring Regulation.bin Decoder/Encoder
 
 This module provides the minimum necessary code to decrypt and encrypt
 Elden Ring regulation.bin files without platform-specific dependencies.
+
+
+regulation.bin is not a single format.
+
+It is a stacked container format:
+
+[ AES-256 encrypted blob ]
+    ↓ decrypt
+[ DCX compressed container ]
+    ↓ decompress
+[ BND4 archive ]
+    ↓ extract
+[ PARAM files + other data ]
+
+
+regulation.bin (logical view)
+    └── BND4 archive
+            ├── EquipParamWeapon.param
+            ├── EquipParamArmor.param
+            ├── SpEffectParam.param
+            ├── NpcParam.param
+            ├── ...
+
 """
 
-from pathlib import Path
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.backends import default_backend
+import csv
+import io
 import os
+import struct
+import time
+from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
+from pathlib import Path
 
+import zstandard as zstd
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad
 from Crypto.Random import get_random_bytes
 
-
+BLOCK_SIZE = 16
 
 ER_REGULATION_KEY = bytes([
     0x99, 0xBF, 0xFC, 0x36, 0x6A, 0x6B, 0xC8, 0xC6,
@@ -23,175 +49,282 @@ ER_REGULATION_KEY = bytes([
     0x24, 0xD3, 0xAF, 0x4E, 0x49, 0x3F, 0xEF, 0x99
 ])
 
-BLOCK_SIZE = 16
+# def decrypt_byte_array(key: bytes, secret: bytes) -> bytes:
+#     iv = secret[:16]
+#     encrypted_content = secret[16:]
+
+#     # Match C# behavior: pad encrypted_content to 16-byte boundary
+#     remainder = len(encrypted_content) % 16
+#     if remainder != 0:
+#         encrypted_content += b"\x00" * (16 - remainder)
+
+#     cipher = AES.new(key, AES.MODE_CBC, iv)
+#     decrypted = cipher.decrypt(encrypted_content)
+
+#     # C# does NOT strip padding
+#     return decrypted
+
+# def decrypt_er_regulation_file(path: str) -> bytes:
+#     with open(path, "rb") as f:
+#         data = f.read()
+
+#     # If already decrypted
+#     if data.startswith(b"BND4"):
+#         return data
+
+#     return decrypt_byte_array(ER_REGULATION_KEY, data)
 
 
-# Elden Ring regulation.bin encryption key
-ER_REGULATION_KEY = bytes([
-    0x99, 0xBF, 0xFC, 0x36, 0x6A, 0x6B, 0xC8, 0xC6,
-    0xF5, 0x82, 0x7D, 0x09, 0x36, 0x02, 0xD6, 0x76,
-    0xC4, 0x28, 0x92, 0xA0, 0x1C, 0x20, 0x7F, 0xB0,
-    0x24, 0xD3, 0xAF, 0x4E, 0x49, 0x3F, 0xEF, 0x99
-])
+# def encrypt_er_regulation_bytes(bnd4_bytes: bytes, fixed_iv: bytes | None = None) -> bytes:
+#     return encrypt_byte_array(ER_REGULATION_KEY, bnd4_bytes, fixed_iv)
 
-def decrypt_regulation(input_path, output_path=None):
-    """Decrypt an Elden Ring regulation.bin file.
+def fully_decrypt_regulation(path: str|Path) -> bytes:
+    # -----------------------
+    # 1. Read encrypted file
+    # -----------------------
+    with open(path, "rb") as f:
+        encrypted = f.read()
 
-    Args:
-        input_path: Path to regulation.bin
-        output_path: Path to save decrypted file (defaults to regulation.parambnd.dcx in same directory)
+    # -----------------------
+    # 2. AES-256-CBC decrypt
+    # -----------------------
+    iv = encrypted[:16]
+    encrypted_content = encrypted[16:]
 
-    Returns:
-        Path to decrypted file
-    """
-    input_path = Path(input_path)
-
-    # Default output path if not provided
-    if output_path is None:
-        output_path = input_path.parent / "regulation.parambnd.dcx"
-    else:
-        output_path = Path(output_path)
-
-    # Read the encrypted file
-    with open(input_path, 'rb') as f:
-        data = f.read()
-
-    # Extract IV (first 16 bytes) and encrypted content
-    iv = data[:16]
-    encrypted_content = data[16:]
-
-    # Create AES cipher in CBC mode
-    cipher = Cipher(
-        algorithms.AES(ER_REGULATION_KEY),
-        modes.CBC(iv),
-        backend=default_backend()
-    )
-
-    # Decrypt the content
-    decryptor = cipher.decryptor()
-    decrypted = decryptor.update(encrypted_content) + decryptor.finalize()
-
-    # Remove PKCS7 padding if present
-    padding_length = decrypted[-1]
-    if padding_length < 16:
-        # Verify the padding
-        padding_valid = True
-        for i in range(padding_length):
-            if decrypted[-i-1] != padding_length:
-                padding_valid = False
-                break
-
-        if padding_valid:
-            decrypted = decrypted[:-padding_length]
-
-    # Write the decrypted file
-    with open(output_path, 'wb') as f:
-        f.write(decrypted)
-
-    return output_path
-
-def encrypt_regulation(input_path, output_path=None):
-    """Encrypt a decrypted Elden Ring param file back to regulation.bin.
-
-    Args:
-        input_path: Path to the decrypted file
-        output_path: Path to save encrypted file (defaults to regulation.bin in same directory)
-
-    Returns:
-        Path to encrypted file
-    """
-    input_path = Path(input_path)
-
-    # Default output path if not provided
-    if output_path is None:
-        output_path = input_path.parent / "regulation.bin"
-    else:
-        output_path = Path(output_path)
-
-    # Read the decrypted file
-    with open(input_path, 'rb') as f:
-        data = f.read()
-
-    # Generate a random 16-byte IV
-    iv = os.urandom(16)
-
-    # Create AES cipher in CBC mode
-    cipher = Cipher(
-        algorithms.AES(ER_REGULATION_KEY),
-        modes.CBC(iv),
-        backend=default_backend()
-    )
-
-    # Apply PKCS7 padding
-    block_size = 16  # AES block size is always 16 bytes (128 bits)
-    padding_length = block_size - (len(data) % block_size)
-    if padding_length == 0:
-        padding_length = block_size
-
-    padded_data = data + bytes([padding_length] * padding_length)
-
-    # Encrypt the data
-    encryptor = cipher.encryptor()
-    encrypted = encryptor.update(padded_data) + encryptor.finalize()
-
-    # Write IV + encrypted data
-    with open(output_path, 'wb') as f:
-        f.write(iv + encrypted)
-
-    return output_path
-
-
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad
-from Crypto.Random import get_random_bytes
-
-BLOCK_SIZE = 16
-
-
-def encrypt_byte_array(key: bytes, secret: bytes, fixed_iv: bytes | None = None) -> bytes:
-    """
-    Mirrors SFUtil.EncryptByteArray exactly.
-    Returns IV (16 bytes) + encrypted content.
-    """
-    if len(key) != 32:
-        raise ValueError("Key must be 32 bytes (AES-256).")
-
-    iv = fixed_iv if fixed_iv is not None else get_random_bytes(16)
-
-    cipher = AES.new(key, AES.MODE_CBC, iv)
-    encrypted_content = cipher.encrypt(pad(secret, BLOCK_SIZE))
-
-    return iv + encrypted_content
-
-
-def decrypt_byte_array(key: bytes, secret: bytes) -> bytes:
-    """
-    Mirrors SFUtil.DecryptByteArray exactly.
-    DOES NOT remove padding (matches PaddingMode.None).
-    """
-    if len(key) != 32:
-        raise ValueError("Key must be 32 bytes (AES-256).")
-
-    iv = secret[:16]
-    encrypted_content = secret[16:]
-
-    # SoulsFormats pads to block boundary if needed
-    remainder = len(encrypted_content) % BLOCK_SIZE
+    # Match SoulsFormats behavior:
+    # pad to 16-byte boundary BEFORE decrypting
+    remainder = len(encrypted_content) % 16
     if remainder != 0:
-        encrypted_content += b"\x00" * (BLOCK_SIZE - remainder)
+        encrypted_content += b"\x00" * (16 - remainder)
 
-    cipher = AES.new(key, AES.MODE_CBC, iv)
+    cipher = AES.new(ER_REGULATION_KEY, AES.MODE_CBC, iv)
     decrypted = cipher.decrypt(encrypted_content)
+
+    # DO NOT strip padding (SoulsFormats does not)
+
+    # -----------------------
+    # 3. If already BND4, done
+    # -----------------------
+    if decrypted.startswith(b"BND4"):
+        return decrypted
+
+    # -----------------------
+    # 4. If DCX, decompress
+    # -----------------------
+    if not decrypted.startswith(b"DCX\x00"):
+        raise ValueError("Unexpected format after AES decrypt")
+
+    offset = 4
+
+    # ---- DCS block ----
+    if decrypted[offset:offset+4] != b"DCS\x00":
+        raise ValueError("Missing DCS block")
+    offset += 4
+    dcs_size = struct.unpack(">I", decrypted[offset:offset+4])[0]
+    offset += 4 + dcs_size
+
+    # ---- DCP block ----
+    if decrypted[offset:offset+4] != b"DCP\x00":
+        raise ValueError("Missing DCP block")
+    offset += 4
+    dcp_size = struct.unpack(">I", decrypted[offset:offset+4])[0]
+    offset += 4 + dcp_size
+
+    # ---- DCA block ----
+    if decrypted[offset:offset+4] != b"DCA\x00":
+        raise ValueError("Missing DCA block")
+    offset += 4
+
+    compressed_size = struct.unpack(">I", decrypted[offset:offset+4])[0]
+    offset += 4
+
+    compressed_data = decrypted[offset:offset+compressed_size]
+
+    # -----------------------
+    # 5. ZSTD decompress
+    # -----------------------
+    dctx = zstd.ZstdDecompressor()
+    result = dctx.decompress(compressed_data)
+
+    return result
+
+
+def decrypt_aes_layer(reg_path: str|Path):
+    
+    reg_path = Path(reg_path)
+
+    # -----------------------
+    # 1. Read encrypted file
+    # -----------------------
+    with open(reg_path, "rb") as f:
+        encrypted = f.read()
+
+    # -----------------------
+    # 2. AES-256-CBC decrypt
+    # -----------------------
+    iv = encrypted[:16]
+    encrypted_content = encrypted[16:]
+
+    # Match SoulsFormats behavior:
+    # pad to 16-byte boundary BEFORE decrypting
+    remainder = len(encrypted_content) % 16
+    if remainder != 0:
+        encrypted_content += b"\x00" * (16 - remainder)
+
+    cipher = AES.new(ER_REGULATION_KEY, AES.MODE_CBC, iv)
+    decrypted = cipher.decrypt(encrypted_content)
+
+    assert decrypted[0:4] == b"DCX\x00", "Not a DCX file"
 
     return decrypted
 
 
-
 def main():
 
-    reg_path = Path("./data/regulation_original.bin").absolute()
+    parser = ArgumentParser(description="Find conflicting references",
+                            formatter_class=ArgumentDefaultsHelpFormatter)
+
+    parser.add_argument("-r", "--regulation-file", type=str, default="./data/reference/regulation_v1.16.1.bin",
+                        help="")
+    args = parser.parse_args()
+
+    reg_path = Path(args.regulation_file).absolute()
+
+    # 1. Decrypt AES layer from regulation.bin
+    dcx_bytes = decrypt_aes_layer(reg_path)
+    # After decrypting, you get raw bytes starting with:
+
+    # 2. Parse DCX header
+    offset = 4
+
+    version1 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+    unk1 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+    unk2 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+    version2 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+    version3 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+
+    dcs_magic = dcx_bytes[offset:offset+4]; offset += 4
+    if dcs_magic != b"DCS\x00":
+        raise ValueError("Missing DCS block")
     
-    result_path = decrypt_regulation(reg_path, "./test.txt")
+    decompressed_size = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+    compressed_size = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+
+    dcp_magic = dcx_bytes[offset:offset+4]; offset += 4
+    if dcp_magic != b"DCP\x00":
+        raise ValueError("Missing DCP block")
+    
+    compression_type = dcx_bytes[offset:offset+4]; offset += 4
+    unk3 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+
+    compression_level = dcx_bytes[offset]
+    offset += 1
+    offset += 3  # padding
+
+    version5 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+    version6 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+    unk5 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+    version7 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
+
+    # Parse DCA block
+    dca_magic = dcx_bytes[offset:offset+4]; offset += 4
+    if dca_magic != b"DCA\x00":
+        raise ValueError("Missing DCA block")
+
+    dca_size = struct.unpack_from(">I", dcx_bytes, offset)[0]
+    offset += 4
+    # DO NOT skip dca_size bytes here.
+    # ZSTD frame begins immediately after the size field.
+    """
+    DCS	Decompression size metadata
+    DCP	Compression type metadata
+    DCA	Compression parameters block
+    DCB	Block-based compression metadata (rare / older)
+    """
+
+    print(dcx_bytes[offset:offset+4].hex())
+
+    print("version1:", hex(version1))
+    print("version2:", hex(version2))
+    print("version3:", hex(version3))
+    print("compression_type:", compression_type)
+    print("decompressed_size:", decompressed_size)
+    print("compressed_size:", compressed_size)
+    print("compression_level:", compression_level)
+
+    # 3. Extract compressed payload
+    remaining = len(dcx_bytes) - offset
+    if remaining < compressed_size:
+        raise ValueError("Not enough bytes for compressed payload")
+
+    compressed_data = dcx_bytes[offset : offset + compressed_size]
+
+    # 4. Decompress ZSTD
+    dctx = zstd.ZstdDecompressor()
+    with dctx.stream_reader(io.BytesIO(compressed_data)) as r:
+        decompressed_data = r.read()  # read() until EOF
+    # zstandard.backend_c.ZstdError: could not determine content size in frame header
+    # decompressed_data = dctx.decompress(compressed_data)
+
+    # 5. Validate size
+    if len(decompressed_data) != decompressed_size:
+        raise ValueError(
+            f"Size mismatch: expected {decompressed_size}, got {len(decompressed_data)}"
+            "Decompressed DCX data size does not match size in header"
+        )
+
+    print("Decompression successful.")
+    print("First 4 bytes of decompressed data:", decompressed_data[:4])
+
+    # 6. Parse BND4 header
+    offset = 0
+
+    magic = decompressed_data[offset:offset+4]; offset += 4
+    if magic != b'BND4':
+        raise ValueError("Not a BND4 archive")
+
+    print("BND magic:", magic)
+
+    # Endianness + version info block
+    unk1 = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+    unk2 = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+
+    # File count
+    file_count = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+
+    # Header size
+    header_size = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+
+    # File header offset
+    file_headers_offset = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+
+    print("File count:", file_count)
+    print("Header size:", header_size)
+    print("File headers offset:", file_headers_offset)
+
+    # 7. Parse file entries
+    entries = []
+
+    offset = file_headers_offset
+
+    for i in range(file_count):
+        entry_offset = offset + i * 0x28
+
+        file_flags = struct.unpack_from(">I", decompressed_data, entry_offset)[0]
+        file_id = struct.unpack_from(">I", decompressed_data, entry_offset + 4)[0]
+        file_data_offset = struct.unpack_from(">I", decompressed_data, entry_offset + 8)[0]
+        file_size = struct.unpack_from(">I", decompressed_data, entry_offset + 12)[0]
+        file_name_offset = struct.unpack_from(">I", decompressed_data, entry_offset + 16)[0]
+
+        entries.append({
+            "id": file_id,
+            "data_offset": file_data_offset,
+            "size": file_size,
+            "name_offset": file_name_offset
+        })
+
+    print("Parsed", len(entries), "file entries")
+
 
     # Access parameters - each parameter is a dictionary-like object
     # For example, to view Radahn's parameters

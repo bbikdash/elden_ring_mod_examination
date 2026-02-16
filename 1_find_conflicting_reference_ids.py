@@ -54,7 +54,7 @@ def compute_ID_set(filename: str|Path):
     return csv_id_set
 
 def main():
-    parser = ArgumentParser(description="Fine conflicting references",
+    parser = ArgumentParser(description="Find conflicting references",
                             formatter_class=ArgumentDefaultsHelpFormatter)
 
     parser.add_argument("-m", "--modified-csv", type=str, default="./data/unlocked_unique_skills_free/BehaviorParam_PC.csv",
