@@ -49,34 +49,6 @@ ER_REGULATION_KEY = bytes([
     0x24, 0xD3, 0xAF, 0x4E, 0x49, 0x3F, 0xEF, 0x99
 ])
 
-# def decrypt_byte_array(key: bytes, secret: bytes) -> bytes:
-#     iv = secret[:16]
-#     encrypted_content = secret[16:]
-
-#     # Match C# behavior: pad encrypted_content to 16-byte boundary
-#     remainder = len(encrypted_content) % 16
-#     if remainder != 0:
-#         encrypted_content += b"\x00" * (16 - remainder)
-
-#     cipher = AES.new(key, AES.MODE_CBC, iv)
-#     decrypted = cipher.decrypt(encrypted_content)
-
-#     # C# does NOT strip padding
-#     return decrypted
-
-# def decrypt_er_regulation_file(path: str) -> bytes:
-#     with open(path, "rb") as f:
-#         data = f.read()
-
-#     # If already decrypted
-#     if data.startswith(b"BND4"):
-#         return data
-
-#     return decrypt_byte_array(ER_REGULATION_KEY, data)
-
-
-# def encrypt_er_regulation_bytes(bnd4_bytes: bytes, fixed_iv: bytes | None = None) -> bytes:
-#     return encrypt_byte_array(ER_REGULATION_KEY, bnd4_bytes, fixed_iv)
 
 def fully_decrypt_regulation(path: str|Path) -> bytes:
     # -----------------------
@@ -178,6 +150,15 @@ def decrypt_aes_layer(reg_path: str|Path):
 
     return decrypted
 
+def read_utf16_string(data, offset):
+    chars = []
+    while True:
+        c = data[offset:offset+2]
+        if c == b'\x00\x00':
+            break
+        chars.append(c)
+        offset += 2
+    return b''.join(chars).decode('utf-16-be')
 
 def main():
 
@@ -286,17 +267,17 @@ def main():
     print("BND magic:", magic)
 
     # Endianness + version info block
-    unk1 = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
-    unk2 = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+    unk1 = struct.unpack_from("<I", decompressed_data, offset)[0]; offset += 4
+    unk2 = struct.unpack_from("<I", decompressed_data, offset)[0]; offset += 4
 
     # File count
-    file_count = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+    file_count = struct.unpack_from("<I", decompressed_data, offset)[0]; offset += 4
 
     # Header size
-    header_size = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+    header_size = struct.unpack_from("<I", decompressed_data, offset)[0]; offset += 4
 
     # File header offset
-    file_headers_offset = struct.unpack_from(">I", decompressed_data, offset)[0]; offset += 4
+    file_headers_offset = struct.unpack_from("<I", decompressed_data, offset)[0]; offset += 4
 
     print("File count:", file_count)
     print("Header size:", header_size)
@@ -325,6 +306,14 @@ def main():
 
     print("Parsed", len(entries), "file entries")
 
+    # Resolve filenames
+    for entry in entries:
+        name = read_utf16_string(decompressed_data, entry["name_offset"])
+        entry["name"] = name
+
+    print("First 5 files:")
+    for e in entries[:5]:
+        print(e["name"])
 
     # Access parameters - each parameter is a dictionary-like object
     # For example, to view Radahn's parameters
