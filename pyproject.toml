@@ -29,7 +29,7 @@ dependencies = [
 where = ["."]
 
 [project.urls]
-"Homepage" = "https://github.com/bbikdash/lightning_object_detection"
+"Homepage" = "https://github.com/"
 
 
 [tool.pixi.workspace]

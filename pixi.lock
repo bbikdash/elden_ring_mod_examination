@@ -355,7 +355,7 @@ packages:
 - pypi: ./
   name: erm-exam
   version: 0.0.1
-  sha256: a5f9537ae431883d827cd38edf8ca8e45c4a9cf5c3bb6c48b0645728cab6676f
+  sha256: b0bf46111dfe98f7f6e8e3e6ff630177df4702c7d45488fdcc0e7823cc836f1d
   requires_dist:
   - numpy==2.4.2
   - pandas==3.0.0

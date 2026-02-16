@@ -28,30 +28,41 @@ regulation.bin (logical view)
 
 """
 
-import csv
 import io
-import os
 import struct
-import time
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 from pathlib import Path
 
 import zstandard as zstd
-from Crypto.Cipher import AES
-from Crypto.Random import get_random_bytes
+from erm_exam.utils.decryption_utils import (
+    _get_param_stem_from_name,
+    _parse_binder_flags,
+    _parse_entry_flags,
+    _parse_param_rows_minimal,
+    _read_cstring,
+    _rows_to_csv,
+    decrypt_aes_layer,
+)
 
-from erm_exam.utils.decryption_utils import decrypt_aes_layer, _parse_binder_flags, _parse_entry_flags, _read_cstring, _reverse_byte_bits
 
 def main():
 
     parser = ArgumentParser(description="Find conflicting references",
                             formatter_class=ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument("-r", "--regulation-file", type=str, default="./data/reference/regulation_v1.16.1.bin",
-                        help="")
+    parser.add_argument("-r", "--regulation-file", type=str,
+                        default="./data/reference/regulation_v1.16.1.bin",
+                        help="Default")
+    parser.add_argument(
+        "--csv-output-dir",
+        type=str,
+        default="./data/reference/regulation_csv_dump",
+        help="Output directory for section 8 PARAM CSV dumps.",
+    )
     args = parser.parse_args()
 
     reg_path = Path(args.regulation_file).absolute()
+    csv_output_dir = Path(args.csv_output_dir).absolute()
 
     # 1. Decrypt AES layer from regulation.bin
     dcx_bytes = decrypt_aes_layer(reg_path)
@@ -260,6 +271,7 @@ def main():
             "size_uncompressed": file_size_uncompressed,
             "name_offset": file_name_offset,
             "name": file_name,
+            "param": _get_param_stem_from_name(file_name),
         })
 
     print("Parsed", len(entries), "file entries")
@@ -267,6 +279,23 @@ def main():
     print("First 5 entries:")
     for e in entries[:5]:
         print(e)
+
+    # 8. Dump PARAM contents to CSV (minimal row parser).
+    dumped_count = 0
+    for entry in entries:
+        if not entry["name"] or not str(entry["name"]).endswith(".param"):
+            continue
+        param_name = entry["param"] or f"entry_{entry['id']}"
+        data_start = entry["data_offset"]
+        data_end = data_start + entry["size"]
+        if data_start < 0 or data_end > len(decompressed_data):
+            continue
+        param_bytes = decompressed_data[data_start:data_end]
+        rows = _parse_param_rows_minimal(param_bytes)
+        csv_path = csv_output_dir / f"{param_name}.csv"
+        _rows_to_csv(csv_path, rows)
+        dumped_count += 1
+    print(f"Dumped {dumped_count} param CSV files to: {csv_output_dir}")
 
     # Access parameters - each parameter is a dictionary-like object
     # For example, to view Radahn's parameters
