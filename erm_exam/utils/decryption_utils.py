@@ -5,13 +5,14 @@ Docstring for erm_exam.utils.decryption_utils
 import csv
 import io
 import struct
+import xml.etree.ElementTree as ET
 from pathlib import Path
-from tqdm import tqdm
 
 import zstandard as zstd
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 from loguru import logger
+from tqdm import tqdm
 
 BLOCK_SIZE = 16
 
@@ -377,6 +378,44 @@ def _rows_to_csv(csv_path: Path, rows: dict) -> None:
             row_record = {"row_id": row_id}
             row_record.update(rows[row_id])
             writer.writerow(row_record)
+
+
+def paramdef_xml_to_datatype_dict(xml_path: str|Path) -> dict:
+    """
+    TODO: Docstring for paramdef_xml_to_datatype_dict
+    
+    :param xml_path: Description
+    :type xml_path: str | Path
+    :return: Description
+    :rtype: dict
+    """
+    # Load the xml file
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+
+    # Build a name -> data type mapping by parsing each field's compact Def string.
+    name_to_type_dict = {}
+    for field in root.iterfind("./Fields/Field"):
+        # Use iterfind() to iterate over all 'Field' elements
+        field_def = field.attrib.get("Def")
+        if not field_def:
+            # Definition does not exist
+            continue
+
+        # Def is typically: "<type> <name>" (and may include array/bitfield/default syntax).
+        type_and_name = field_def.split(None, 2)
+        if len(type_and_name) < 2:
+            continue
+
+        # Extract the data type string and clean/extract field name string
+        data_type = type_and_name[0]
+        field_name = type_and_name[1].split("[", 1)[0].split(":", 1)[0]
+
+        # Add element to the dictionary
+        name_to_type_dict[field_name] = data_type
+    
+    return name_to_type_dict
+
 
 def decode_parameter_binary_with_xml(param_binary_string: str, param_def_xml: str|Path):
     """

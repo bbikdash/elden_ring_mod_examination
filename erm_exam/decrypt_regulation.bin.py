@@ -30,16 +30,15 @@ regulation.bin (logical view)
 
 import io
 import struct
+import time
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 from pathlib import Path
-import time
-import time
+
 from loguru import logger
 
 from erm_exam.utils.decryption_utils import (
-    extract_params_from_elden_ring_regulation_binary,
-    _rows_to_csv,
-)
+    _rows_to_csv, extract_params_from_elden_ring_regulation_binary)
+
 
 def main():
 
