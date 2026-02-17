@@ -282,6 +282,6 @@ REPO_ROOT = Path(__file__).absolute().parent.parent
 ])
 def test_paramdef_xml_to_datatype_dict(paramdef_xml, expected_dict):
     actual_dict = paramdef_xml_to_datatype_dict(paramdef_xml)
-    assert expected_dict == actual_dict, ""
+    assert expected_dict == actual_dict, "Paramdef parsing and conversion to dict is incorrect"
 
 # def test_

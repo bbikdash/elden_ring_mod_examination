@@ -37,7 +37,7 @@ from pathlib import Path
 from loguru import logger
 
 from erm_exam.utils.decryption_utils import (
-    _rows_to_csv, extract_params_from_elden_ring_regulation_binary)
+    extract_params_from_elden_ring_regulation_binary)
 
 
 def main():
@@ -46,7 +46,7 @@ def main():
                             formatter_class=ArgumentDefaultsHelpFormatter)
 
     parser.add_argument("-r", "--regulation-file", type=str,
-                        default="./data/reference/regulation_v1.16.1.bin",
+                        default="./data/reference/1.16.1_11611000/regulation.bin",
                         help="Default")
     parser.add_argument(
         "--csv-output-dir",

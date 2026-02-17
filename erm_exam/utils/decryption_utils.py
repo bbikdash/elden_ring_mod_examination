@@ -276,10 +276,52 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
         }
     return entries
 
+def paramdef_xml_to_datatype_dict(xml_path: str|Path) -> dict:
+    """
+    TODO: Docstring for paramdef_xml_to_datatype_dict
+    
+    :param xml_path: Description
+    :type xml_path: str | Path
+    :return: Description
+    :rtype: dict
+    """
+    # Load the xml file
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
 
-def dump_param():
+    # Build a name -> data type mapping by parsing each field's compact Def string.
+    name_to_type_dict = {}
+    for field in root.iterfind("./Fields/Field"):
+        # Use iterfind() to iterate over all 'Field' elements
+        field_def = field.attrib.get("Def")
+        if not field_def:
+            # Definition does not exist
+            continue
+
+        # Def is typically: "<type> <name>" (and may include array/bitfield/default syntax).
+        type_and_name = field_def.split(None, 2)
+        if len(type_and_name) < 2:
+            continue
+
+        # Extract the data type string and clean/extract field name string
+        data_type = type_and_name[0]
+        field_name = type_and_name[1].split("[", 1)[0].split(":", 1)[0]
+
+        # Add element to the dictionary
+        name_to_type_dict[field_name] = data_type
+    
+    return name_to_type_dict
+
+def convert_param_bytes_to_csv(param_bytes: bytearray, data_type_dict: dict):
+    """
+    Docstring for convert_param_bytes_to_csv
+    
+    :param param_bytes: Description
+    :type param_bytes: bytearray
+    :param data_type_dict: Description
+    :type data_type_dict: dict
+    """
     pass
-
 
 def _reverse_byte_bits(byte_value: int) -> int:
     """
@@ -294,7 +336,18 @@ def _reverse_byte_bits(byte_value: int) -> int:
 
 
 def _parse_binder_flags(raw_flags: int, bit_little_endian: bool) -> int:
-    """Mirror `BinderFlags.from_byte()` behavior used by SoulsStruct for BND4."""
+    """
+    Docstring for _parse_binder_flags
+    
+    :param raw_flags: Description
+    :type raw_flags: int
+    :param bit_little_endian: Description
+    :type bit_little_endian: bool
+    :return: Description
+    :rtype: int
+    
+    Mirror `BinderFlags.from_byte()` behavior used by SoulsStruct for BND4.
+    """
     flags = raw_flags
     bit_big_endian = not bit_little_endian
     is_big_endian = bool(flags & 0b0000_0001)
@@ -384,43 +437,6 @@ def _rows_to_csv(csv_path: Path, rows: dict) -> None:
             row_record = {"row_id": row_id}
             row_record.update(rows[row_id])
             writer.writerow(row_record)
-
-
-def paramdef_xml_to_datatype_dict(xml_path: str|Path) -> dict:
-    """
-    TODO: Docstring for paramdef_xml_to_datatype_dict
-    
-    :param xml_path: Description
-    :type xml_path: str | Path
-    :return: Description
-    :rtype: dict
-    """
-    # Load the xml file
-    tree = ET.parse(xml_path)
-    root = tree.getroot()
-
-    # Build a name -> data type mapping by parsing each field's compact Def string.
-    name_to_type_dict = {}
-    for field in root.iterfind("./Fields/Field"):
-        # Use iterfind() to iterate over all 'Field' elements
-        field_def = field.attrib.get("Def")
-        if not field_def:
-            # Definition does not exist
-            continue
-
-        # Def is typically: "<type> <name>" (and may include array/bitfield/default syntax).
-        type_and_name = field_def.split(None, 2)
-        if len(type_and_name) < 2:
-            continue
-
-        # Extract the data type string and clean/extract field name string
-        data_type = type_and_name[0]
-        field_name = type_and_name[1].split("[", 1)[0].split(":", 1)[0]
-
-        # Add element to the dictionary
-        name_to_type_dict[field_name] = data_type
-    
-    return name_to_type_dict
 
 
 def decode_parameter_binary_with_xml(param_binary_string: str, param_def_xml: str|Path):

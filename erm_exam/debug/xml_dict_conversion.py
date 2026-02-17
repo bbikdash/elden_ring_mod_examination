@@ -21,8 +21,9 @@ def main():
     # Try loading an xml from elden ring param defs
     # xml_path = repo_root / "data/elden_ring_param_definitions/BehaviorParam.xml"
     # xml_path = repo_root / "data/elden_ring_param_definitions/MoveParam.xml"
-    xml_path = repo_root / "data/elden_ring_param_definitions/BulletParam.xml"
+    # xml_path = repo_root / "data/elden_ring_param_definitions/BulletParam.xml"
     # xml_path = repo_root / "data/elden_ring_param_definitions/EquipParamGem.xml"
+    xml_path = repo_root / "data/elden_ring_param_definitions/NpcParam.xml"
     # xml_path = repo_root / "data/elden_ring_param_definitions/ShopLineupParam.xml"
     print()
     print(f"Loading {ef.underl}{xml_path}{ef.rs}")

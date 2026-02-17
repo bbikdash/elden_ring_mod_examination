@@ -16,7 +16,7 @@ from pathlib import Path
 from loguru import logger
 
 from erm_exam.utils.decryption_utils import (
-    _rows_to_csv, extract_params_from_elden_ring_regulation_binary, paramdef_xml_to_datatype_dict)
+    extract_params_from_elden_ring_regulation_binary, paramdef_xml_to_datatype_dict)
 
 
 def main():
@@ -45,6 +45,11 @@ def main():
 
     # TODO: Now that I've extracted the params from the regulation.bin, I want to decode the raw bytes of the entry dict data value into a csv file. 
     # Load the right paramdef file to know how to properly parse the raw bytes into columns and their data types. Use paramdef_xml_to_datatype_dict to convert the raw bytes into a CSV for BehaviorParamPC.xml
+
+    param = entries.get("BehaviorParam")
+    paramdef_types = paramdef_xml_to_datatype_dict("")
+    print()
+
 
 
 
