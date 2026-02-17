@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta" # If not defined, then legacy behavior c
 
 [project]
 name = "erm_exam"
-version = "0.0.1"
+version = "0.0.5"
 authors = [
     {name = "Bassam Bikdash", email = "bbikdash@github.com"}
 ]
@@ -23,8 +23,7 @@ dependencies = [
     "pytest>=9.0.2",
     "cryptography==46.0.5",
     "pycryptodome==3.23.0",
-    "zstd==1.5.7",
-    "jupyter==1.1.1", "zstandard",
+    "jupyter==1.1.1",
 ]
 
 [tool.setuptools.packages.find]

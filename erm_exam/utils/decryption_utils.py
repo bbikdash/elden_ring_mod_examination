@@ -8,7 +8,7 @@ import struct
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-import zstandard as zstd
+from compression import zstd
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 from loguru import logger
@@ -127,7 +127,9 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
     # 7. Decompress ZSTD payload
     logger.info("Step 7 / 10: Decompressing ZSTD payload")
     dctx = zstd.ZstdDecompressor()
-    with dctx.stream_reader(io.BytesIO(compressed_data)) as r:
+    # with dctx.stream_reader(io.BytesIO()) as r:
+    #     decompressed_data = r.read()  # read() until EOF
+    with zstd.open(io.BytesIO(compressed_data)) as r:
         decompressed_data = r.read()  # read() until EOF
 
     # 8. Validate decompressed size
@@ -263,6 +265,7 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
         param_name = _get_param_stem_from_name(file_name)
         entries[param_name] = {
             "id": file_id,
+            "param": param_name,
             "data": entry_raw_data,
             "flags": entry_flags,
             "data_offset": file_data_offset,
@@ -270,9 +273,12 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
             "size_uncompressed": file_size_uncompressed,
             "name_offset": file_name_offset,
             "name": file_name,
-            "param": param_name,
         }
     return entries
+
+
+def dump_param():
+    pass
 
 
 def _reverse_byte_bits(byte_value: int) -> int:
