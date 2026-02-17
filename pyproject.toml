@@ -22,7 +22,9 @@ dependencies = [
     "loguru>=0.7.3",
     "pytest>=9.0.2",
     "cryptography==46.0.5",
-    "pycryptodome==3.23.0", "zstandard", "jupyter==1.1.1",
+    "pycryptodome==3.23.0",
+    "zstd==1.5.7",
+    "jupyter==1.1.1", "zstandard",
 ]
 
 [tool.setuptools.packages.find]

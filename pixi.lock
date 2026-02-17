@@ -141,6 +141,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/34/db/b10e48aa8fff7407e67470363eac595018441cf32d5e1001567a7aeba5d2/websocket_client-1.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/3f/0e/fa3b193432cfc60c93b42f3be03365f5f909d2b3ea410295cf36df739e31/widgetsnbextension-4.0.15-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/31/dc/cc50210e11e465c975462439a492516a73300ab8caa8f5e0902544fd748b/zstandard-0.25.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/1b/dd/3146869d12758d12d487c25b433166e3105e8caf64632cb5118358d791df/zstd-1.5.7.0.tar.gz
       - pypi: ./
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda
@@ -355,7 +356,7 @@ packages:
 - pypi: ./
   name: erm-exam
   version: 0.0.1
-  sha256: b0bf46111dfe98f7f6e8e3e6ff630177df4702c7d45488fdcc0e7823cc836f1d
+  sha256: f4bf88d4eb40e1889acf608798b1c1ce10b4b25271cd5f75379dfac641efefce
   requires_dist:
   - numpy==2.4.2
   - pandas==3.0.0
@@ -367,8 +368,9 @@ packages:
   - pytest>=9.0.2
   - cryptography==46.0.5
   - pycryptodome==3.23.0
-  - zstandard
+  - zstd==1.5.7
   - jupyter==1.1.1
+  - zstandard
 - pypi: https://files.pythonhosted.org/packages/c1/ea/53f2148663b321f21b5a606bd5f191517cf40b7072c0497d3c92c4a13b1e/executing-2.2.1-py2.py3-none-any.whl
   name: executing
   version: 2.2.1
@@ -2002,6 +2004,10 @@ packages:
   - cffi~=1.17 ; python_full_version < '3.14' and platform_python_implementation != 'PyPy' and extra == 'cffi'
   - cffi>=2.0.0b0 ; python_full_version >= '3.14' and platform_python_implementation != 'PyPy' and extra == 'cffi'
   requires_python: '>=3.9'
+- pypi: https://files.pythonhosted.org/packages/1b/dd/3146869d12758d12d487c25b433166e3105e8caf64632cb5118358d791df/zstd-1.5.7.0.tar.gz
+  name: zstd
+  version: 1.5.7.0
+  sha256: afe4f5dc80ffaa3c97be48b2f74065883c4607610f9af3e8f7101c3a5047915a
 - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
   sha256: 68f0206ca6e98fea941e5717cec780ed2873ffabc0e1ed34428c061e2c6268c7
   md5: 4a13eeac0b5c8e5b8ab496e6c4ddd829
