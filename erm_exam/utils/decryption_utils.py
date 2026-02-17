@@ -126,8 +126,7 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
     dctx = zstd.ZstdDecompressor()
     with dctx.stream_reader(io.BytesIO(compressed_data)) as r:
         decompressed_data = r.read()  # read() until EOF
-    # zstandard.backend_c.ZstdError: could not determine content size in frame header
-    # decompressed_data = dctx.decompress(compressed_data)
+
     # 8. Validate decompressed size
     logger.info("Step 8 / 10: Validating decompressed size")
     if len(decompressed_data) != decompressed_size:
@@ -202,7 +201,7 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
         )
     # 10. Parse BND4 file entries
     logger.info("Step 10 / 10: Parsing BND4 file entries")
-    entries = []
+    entries = {}
     path_encoding = "utf-16-le" if unicode_names else "shift-jis"
     entry_table_offset = header_size
 
@@ -252,16 +251,26 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
             file_name_offset = None
             file_name = None
 
-        entries.append({
+
+        data_start = file_data_offset
+        data_end = data_start + file_size
+        if data_start < 0 or data_end > len(decompressed_data):
+            entry_raw_data = b""
+        else:
+            entry_raw_data = decompressed_data[data_start:data_end]
+
+        param_name = _get_param_stem_from_name(file_name)
+        entries[param_name] = {
             "id": file_id,
+            "data": entry_raw_data,
             "flags": entry_flags,
             "data_offset": file_data_offset,
             "size": file_size,
             "size_uncompressed": file_size_uncompressed,
             "name_offset": file_name_offset,
             "name": file_name,
-            "param": _get_param_stem_from_name(file_name),
-        })
+            "param": param_name,
+        }
     return entries
 
 
@@ -368,9 +377,4 @@ def _rows_to_csv(csv_path: Path, rows: dict) -> None:
             row_record = {"row_id": row_id}
             row_record.update(rows[row_id])
             writer.writerow(row_record)
-
-
-    # 1. Decrypt AES layer from regulation.bin
-    dcx_bytes = decrypt_aes_layer(reg_path)
-    # After decrypting, you get raw bytes starting with:
 
