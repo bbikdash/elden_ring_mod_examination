@@ -22,6 +22,8 @@ ER_REGULATION_KEY = bytes([
     0x24, 0xD3, 0xAF, 0x4E, 0x49, 0x3F, 0xEF, 0x99
 ])
 
+ER_PARAM_DEFS_DIR = Path(__file__).absolute().parent.parent
+
 
 def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict:
     """
@@ -143,8 +145,6 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
     magic = decompressed_data[offset:offset+4]; offset += 4
     if magic != b'BND4':
         raise ValueError("Not a BND4 archive")
-
-    print("BND magic:", magic)
 
     # SoulsStruct checks byte index 9 to determine BND4 byte order.
     bit_little_endian = bool(decompressed_data[10])
@@ -377,4 +377,28 @@ def _rows_to_csv(csv_path: Path, rows: dict) -> None:
             row_record = {"row_id": row_id}
             row_record.update(rows[row_id])
             writer.writerow(row_record)
+
+def decode_parameter_binary_with_xml(param_binary_string: str, param_def_xml: str|Path):
+    """
+    Given the elden ring parameter name
+
+    Decoding the game parameter binary into a CSV requires knowing the columns (i.e. data types)
+    to expect and convert into the relevant values
+    
+    :param param_name: Description
+    """
+    param_def_xml = Path(param_def_xml)
+
+    # Load XML param definition
+
+
+    # Create dictionary of column names to data types
+
+
+    # Decode binary using the dictionary data types
+
+
+    # Return the decoded contents as a CSV
+
+
 

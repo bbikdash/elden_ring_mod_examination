@@ -67,7 +67,7 @@ def main():
     print("Parsed", len(entries), "file entries")
 
     print("First 5 entries:")
-    for e in entries[:5]:
+    for e in entries.values():
         print(e)
 
     # 8. Dump PARAM contents to CSV (minimal row parser).
