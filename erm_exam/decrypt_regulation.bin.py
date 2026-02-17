@@ -33,6 +33,8 @@ import struct
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 from pathlib import Path
 import time
+import time
+from loguru import logger
 
 from erm_exam.utils.decryption_utils import (
     extract_params_from_elden_ring_regulation_binary,
@@ -61,7 +63,12 @@ def main():
     csv_output_dir = Path(args.csv_output_dir).absolute()
 
     entries = extract_params_from_elden_ring_regulation_binary(reg_path)
-    print()
+    
+    print("Parsed", len(entries), "file entries")
+
+    print("First 5 entries:")
+    for e in entries[:5]:
+        print(e)
 
     # 8. Dump PARAM contents to CSV (minimal row parser).
     # dumped_count = 0
@@ -84,6 +91,9 @@ def main():
     # For example, to view Radahn's parameters
     # radahn = regulation.NpcParam[47300000]
     # print(radahn)
+
+    logger.info(f"Elapsed time: {time.time() - start:.8f}")
+    logger.success("done")
 
 
 if __name__ == "__main__":

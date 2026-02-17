@@ -37,7 +37,7 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
     with open(reg_path, "rb") as f:
         encrypted = f.read()
 
-    logger.info("Step 1 / N: Starting AES layer decryption")
+    logger.info("Step 1 / 10: Starting AES layer decryption")
     iv = encrypted[:16]
     encrypted_content = encrypted[16:]
 
@@ -52,9 +52,8 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
 
     if dcx_bytes[:4] != b"DCX\x00":
         raise ValueError("Missing DCX block")
-
     # 2. Parse DCX header
-    logger.info("Step 2 / N: Parsing DCX header")
+    logger.info("Step 2 / 10: Parsing DCX header")
 
     offset = 4
 
@@ -63,18 +62,16 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
     unk2 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
     version2 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
     version3 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
-
     # 3. Parse DCS block
-    logger.info("Step 3 / N: Parsing DCX header")
+    logger.info("Step 3 / 10: Parsing DCS header")
     dcs_magic = dcx_bytes[offset:offset+4]; offset += 4
     if dcs_magic != b"DCS\x00":
         raise ValueError("Missing DCS block")
     
     decompressed_size = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
     compressed_size = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
-
     # 4. Parse DCP block substructures inside DCX
-    logger.info("Step 4 / N: Parsing DCP header")
+    logger.info("Step 4 / 10: Parsing DCP header")
     dcp_magic = dcx_bytes[offset:offset+4]; offset += 4
     if dcp_magic != b"DCP\x00":
         raise ValueError("Missing DCP block")
@@ -90,9 +87,8 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
     version6 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
     unk5 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
     version7 = struct.unpack_from(">I", dcx_bytes, offset)[0]; offset += 4
-
     # 5. Parse DCA block substructures inside DCX
-    logger.info("Step 5 / N: Parsing DCA header")
+    logger.info("Step 5 / 10: Parsing DCA header")
     dca_magic = dcx_bytes[offset:offset+4]; offset += 4
     if dca_magic != b"DCA\x00":
         raise ValueError("Missing DCA block")
@@ -107,7 +103,6 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
     DCA	Compression parameters block
     DCB	Block-based compression metadata (rare / older)
     """
-
     print(dcx_bytes[offset:offset+4].hex())
 
     print("version1:", hex(version1))
@@ -118,32 +113,31 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
     print("compressed_size:", compressed_size)
     print("compression_level:", compression_level)
 
-    # 3. Extract compressed payload 
+    # 6. Extract compressed payload
+    logger.info("Step 6 / 10: Extracting compressed payload")
     remaining = len(dcx_bytes) - offset
     if remaining < compressed_size:
         raise ValueError("Not enough bytes for compressed payload")
 
     compressed_data = dcx_bytes[offset : offset + compressed_size]
 
-    # 6. Decompress ZSTD
-    logger.info("Step 6 / N: Parsing DCX header")
+    # 7. Decompress ZSTD payload
+    logger.info("Step 7 / 10: Decompressing ZSTD payload")
     dctx = zstd.ZstdDecompressor()
     with dctx.stream_reader(io.BytesIO(compressed_data)) as r:
         decompressed_data = r.read()  # read() until EOF
     # zstandard.backend_c.ZstdError: could not determine content size in frame header
     # decompressed_data = dctx.decompress(compressed_data)
-
-    # 5. Validate size
+    # 8. Validate decompressed size
+    logger.info("Step 8 / 10: Validating decompressed size")
     if len(decompressed_data) != decompressed_size:
         raise ValueError(
             f"Size mismatch: expected {decompressed_size}, got {len(decompressed_data)}"
             "Decompressed DCX data size does not match size in header"
         )
 
-    print("Decompression successful.")
-    print("First 4 bytes of decompressed data:", decompressed_data[:4])
-
-    # 6. Parse BND4 header
+    # 9. Parse BND4 header
+    logger.info("Step 9 / 10: Parsing BND4 header")
     print("Total archive size:", len(decompressed_data))
     offset = 0
 
@@ -206,13 +200,15 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
         raise ValueError(
             f"BND4 entry header size mismatch: expected {expected_entry_header_size}, got {entry_header_size}"
         )
-
-    # 7. Parse file entries
+    # 10. Parse BND4 file entries
+    logger.info("Step 10 / 10: Parsing BND4 file entries")
     entries = []
     path_encoding = "utf-16-le" if unicode_names else "shift-jis"
     entry_table_offset = header_size
 
-    for i in range(file_count):
+    for i in tqdm(range(file_count),
+                  desc="Decoding parameter file entries",
+                  unit="paramdef"):
         entry_offset = entry_table_offset + i * entry_header_size
         entry_cursor = entry_offset
 
@@ -266,13 +262,6 @@ def extract_params_from_elden_ring_regulation_binary(reg_path: str|Path) -> dict
             "name": file_name,
             "param": _get_param_stem_from_name(file_name),
         })
-
-    print("Parsed", len(entries), "file entries")
-
-    print("First 5 entries:")
-    for e in entries[:5]:
-        print(e)
-    
     return entries
 
 
@@ -385,29 +374,3 @@ def _rows_to_csv(csv_path: Path, rows: dict) -> None:
     dcx_bytes = decrypt_aes_layer(reg_path)
     # After decrypting, you get raw bytes starting with:
 
-    # 2. Parse DCX header
-    # 2.5 Parse DCS block
-    # 2.75 Parse DCP block
-    # Parse DCA block
-    # 3. Extract compressed payload
-
-    # 4. Decompress ZSTD
-    # 5. Validate size
-    # 6. Parse BND4 header
-    # 7. Parse file entries
-    # 8. Dump PARAM contents to CSV (minimal row parser).
-
-
-class EldenRingRegulationDecoder():
-
-    def __init__(self, regulation_bin_path: str|Path):
-        self.regulation_bin_path = Path(regulation_bin_path).absolute()    
-
-    def load_regulation(self):
-        pass
-    
-    def get_param_names(self) -> list:
-        pass
-
-    def reset(self):
-        pass
