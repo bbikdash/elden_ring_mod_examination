@@ -23,7 +23,6 @@ dependencies = [
     "pytest>=9.0.2",
     "cryptography==46.0.5",
     "pycryptodome==3.23.0",
-    "jupyter==1.1.1",
 ]
 
 [tool.setuptools.packages.find]
