@@ -5,3 +5,25 @@ As the title says, this repo and scripting was an attempt to update Clever's mod
 I've isolated a lot of the changes Clever made to the CSV files in [unlocked_unique_skills_free_v1.16.1/](./data/unlocked_unique_skills_free_v1.16.1/) by remapping the colliding values from the v1.06 mod to unused values in v1.16 of Elden Ring. However, when I package them into the `regulation.bin`, Seamless_Coop complains that the save file is corrupted indicating that the `regulation.bin` is malformed and not created properly.
 
 If someone who knows more about Elden Ring modding in general and about how IDs should be mapped, feel free to take a crack at it.
+
+## Installation
+Use pixi or pip
+```bash
+cd unlocked_unique_skills_v1.16_attempt
+
+# Create a pip virtual env
+# source <your venv>
+# pip install -e .
+
+# Or this (recommended)
+pixi install
+pixi shell
+```
+
+
+## Usage
+
+```bash
+pixi shell
+python erm_exam/find_conflicting_reference_ids.py <-h>
+```
