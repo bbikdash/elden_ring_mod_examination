@@ -1,9 +1,9 @@
 # Field values follow this format: [Comparison Value] -> [Primary Value]
 [-- BehaviorParam_PC --]
-  2140 Shared [AOW] Carian Retaliation:
+  2140:
     [category]: 0 -> 12
 
-  2141 Shared [AOW] Carian Retaliation:
+  2141:
     [category]: 0 -> 12
 
   2201:
@@ -12,22 +12,22 @@
   2202:
     [category]: 0 -> 1
 
-  2900 Deathbed Dress - Ally HP Restore:
+  2900:
     [category]: 0 -> 1
 
-  3000 [Incantation] Fire's Deadly Sin:
+  3000:
     [category]: 0 -> 1
 
-  3005 [Incantation] Fire's Deadly Sin:
+  3005:
     [category]: 0 -> 1
 
-  3020 [Incantation] Law of Causality:
+  3020:
     [category]: 0 -> 1
 
-  100301001 Dark Moon Greatsword -:
+  100301001 Dark Moon Greatsword:
     [stamina]: 30 -> 40
 
-  100301002 Dark Moon Greatsword -:
+  100301002 Dark Moon Greatsword:
     [stamina]: 42 -> 60
 
   100403001 Ruins Greatsword:
@@ -36,274 +36,274 @@
   100403005 Ruins Greatsword:
     [category]: 0 -> 1
 
-  101400800 Default - Axe:
+  101400800 Axe - Powerstance - R1 Combo #1 Right-hand:
     [category]: 1 -> 2
 
-  101400810 Default - Axe:
+  101400810 Axe - Powerstance - R1 Combo #2 Right-hand:
     [category]: 1 -> 2
 
-  101400820 Default - Axe:
+  101400820 Axe - Powerstance - R1 Combo #3 Right-hand:
     [category]: 1 -> 2
 
-  101400830 Default - Axe:
+  101400830 Axe - Powerstance - R1 Combo #4 Right-hand:
     [category]: 1 -> 2
 
-  101400860 Default - Axe:
+  101400860 Axe - Powerstance - R1 - Dash Right-hand:
     [category]: 1 -> 2
 
-  101400870 Default - Axe:
+  101400870 Axe - Powerstance - R1 - Roll Right-hand:
     [category]: 1 -> 2
 
-  101400880 Default - Axe:
+  101400880 Axe - Powerstance - R1 - Backstep Right-hand:
     [category]: 1 -> 2
 
-  101400890 Default - Axe:
+  101400890 Axe - Powerstance - R1 - Jump Right-hand:
     [category]: 1 -> 2
 
-  101703130 Serpent-Hunter -:
+  101703130 Serpent-Hunter - 1H - R1 - Roll:
     [refId]: 1703130 -> 1700130
 
-  101703160 Serpent-Hunter -:
+  101703160 Serpent-Hunter - 1H - R1 - Jump #2:
     [refId]: 1703160 -> 1700160
 
-  101703165 Serpent-Hunter -:
+  101703165 Serpent-Hunter:
     [refId]: 1703165 -> 1700165
 
-  101703330 Serpent-Hunter -:
+  101703330 Serpent-Hunter - 2H - R1 - Roll:
     [refId]: 1703330 -> 1700330
 
-  101703360 Serpent-Hunter -:
+  101703360 Serpent-Hunter - 2H - R1 - Jump #2:
     [refId]: 1703360 -> 1700360
 
-  101703365 Serpent-Hunter -:
+  101703365 Serpent-Hunter:
     [refId]: 1703365 -> 1700365
 
-  102301105 Watchdog's Staff -:
+  102301105 Watchdog's Staff - 1H - R2 #1 - Charged:
     [refId]: 2311105 -> 2300105
 
-  102301305 Watchdog's Staff -:
+  102301305 Watchdog's Staff - 2H - R2 #1 - Charged:
     [refId]: 2311305 -> 2300305
 
-  300000042 Shared [AOW] Eruption:
+  300000042 [Ash of War] Eruption - FP - Bullet:
     [category]: 0 -> 1
 
-  300000061 Shared [AOW] Gravitas:
+  300000061 [Ash of War] Gravitas - FP - Bullet:
     [category]: 0 -> 12
 
-  300000064 Shared [AOW] Gravitas:
+  300000064 [Ash of War] Gravitas - FP - Bullet:
     [category]: 0 -> 12
 
-  300000065 Shared [AOW] Gravitas:
+  300000065 [Ash of War] Gravitas - FP - Bullet:
     [category]: 0 -> 12
 
-  300000075 Shared [AOW] Ice Spear:
+  300000075 [Ash of War] Ice Spear - FP - Bullet:
     [category]: 0 -> 1
 
-  300000140 Shared [AOW] Flame of the Redmanes:
+  300000140 [Ash of War] Flame of the Redmanes - FP - Bullet:
     [category]: 0 -> 1
 
-  300000262 Shared [AOW] Glintblade Phalanx:
+  300000262 [Ash of War] Glintblade Phalanx - Bullet:
     [category]: 0 -> 1
 
-  300000322 Shared [AOW] Earthshaker:
+  300000322 [Ash of War] Earthshaker - FP - Slam - Hit #3:
     [category]: 0 -> 12
 
-  300000330 Shared [AOW] Glintstone Pebble:
+  300000330 [Ash of War] Glintstone Pebble - FP - Bullet:
     [category]: 0 -> 1
 
-  300000340 Shared [AOW] Flaming Strike:
+  300000340 [Ash of War] Flaming Strike - FP - Bullet:
     [stamina]: 0 -> 10
     [category]: 0 -> 1
 
-  300000350 Shared [AOW] Thunderbolt:
+  300000350 [Ash of War] Thunderbolt - FP - Bullet:
     [category]: 0 -> 11
 
-  300000351 Shared [AOW] Thunderbolt:
+  300000351 [Ash of War] Thunderbolt - No FP - Raise Sword:
     [category]: 12 -> 11
 
-  300000552 Shared [AOW] Golden Land:
+  300000552 [Ash of War] Golden Land - FP - Bullet:
     [category]: 0 -> 1
 
-  300000571 Shared [AOW] Sacred Ring of Light:
+  300000571 [Ash of War] Sacred Ring of Light - FP - Bullet:
     [category]: 0 -> 12
 
-  300000572 Shared [AOW] Sacred Ring of Light:
+  300000572 [Ash of War] Sacred Ring of Light:
     [category]: 0 -> 12
 
-  300000576 Shared [AOW] Sacred Ring of Light:
+  300000576 [Ash of War] Sacred Ring of Light - FP - Followup #1 - Bullet:
     [category]: 0 -> 12
 
-  300000577 Shared [AOW] Sacred Ring of Light:
+  300000577 [Ash of War] Sacred Ring of Light:
     [category]: 0 -> 12
 
-  300000581 Shared [AOW] Sacred Ring of Light:
+  300000581 [Ash of War] Sacred Ring of Light - FP - Followup #2 - Bullet:
     [category]: 0 -> 12
 
-  300000582 Shared [AOW] Sacred Ring of Light:
+  300000582 [Ash of War] Sacred Ring of Light:
     [category]: 0 -> 12
 
-  300000631 Shared [AOW] Blood Blade:
+  300000631 [Ash of War] Blood Blade - FP - Bullet:
     [category]: 0 -> 12
 
-  300000634 Shared [AOW] Blood Blade:
+  300000634 [Ash of War] Blood Blade - FP - Followup #1 - Bullet:
     [category]: 0 -> 12
 
-  300000637 Shared [AOW] Blood Blade:
+  300000637 [Ash of War] Blood Blade - FP - Followup #2 - Bullet:
     [category]: 0 -> 12
 
-  300000680 Shared [AOW] Carian Retaliation:
+  300000680 [Ash of War] Carian Retaliation - FP - Bullet:
     [category]: 0 -> 12
 
-  300000681 Shared [AOW] Carian Retaliation:
+  300000681:
     [category]: 0 -> 12
 
-  300000685 Shared [AOW] Storm Wall:
+  300000685 [Ash of War] Storm Wall - FP Bullet:
     [category]: 0 -> 12
 
-  300000690 Shared [AOW] Golden Parry:
+  300000690 [Ash of War] Golden Parry:
     [category]: 0 -> 12
 
-  300000695 Shared [AOW] Thops's Barrier:
+  300000695:
     [category]: 0 -> 12
 
-  300000710 Shared [AOW] Lightning Ram:
+  300000710 [Ash of War] Lightning Ram - FP - Roll:
     [category]: 5 -> 12
 
-  300000711 Shared [AOW] Lightning Ram - Roll:
+  300000711 [Ash of War] Lightning Ram - FP - Roll Continue:
     [category]: 5 -> 12
 
-  300000715 Shared [AOW] Lightning Ram:
+  300000715 [Ash of War] Lightning Ram - No FP - Roll:
     [category]: 5 -> 12
 
-  300000716 Shared [AOW] Lightning Ram:
+  300000716 [Ash of War] Lightning Ram - No FP - Roll Continue:
     [category]: 5 -> 12
 
-  300000760 Shared [AOW] White Shadow's Lure:
+  300000760 [Ash of War] White Shadow's Lure - FP - Bullet:
     [category]: 0 -> 12
 
-  300000761 Shared [AOW] White Shadow's Lure:
+  300000761 [Ash of War] White Shadow's Lure:
     [category]: 0 -> 12
 
-  300000762 Shared [AOW] White Shadow's Lure:
+  300000762 [Ash of War] White Shadow's Lure:
     [category]: 0 -> 12
 
-  300000770 Shared [AOW] Phantom Slash:
+  300000770 [Ash of War] Phantom Slash - FP - Bullet:
     [category]: 0 -> 1
 
-  300000775 Shared [AOW] Phantom Slash:
+  300000775 [Ash of War] Phantom Slash - FP - Slam - Bullet:
     [category]: 0 -> 1
 
-  300000790 Shared [AOW] Ground Slam:
+  300000790 [Ash of War] Ground Slam - Slam #1:
     [category]: 5 -> 12
 
-  300000791 Shared [AOW] Ground Slam:
+  300000791 [Ash of War] Ground Slam - Slam #2:
     [category]: 0 -> 12
 
-  300000795 Shared [AOW] Ground Slam:
+  300000795 [Ash of War] Thop's Barrier - FP - Parry:
     [category]: 5 -> 12
 
-  300000796 Shared [AOW] Ground Slam:
+  300000796:
     [category]: 0 -> 12
 
-  300000800 Shared [AOW] Golden Slam:
+  300000800 [Ash of War] Golden Slam - FP - Slam #1:
     [category]: 5 -> 12
 
-  300000802 Shared [AOW] Golden Slam:
+  300000802 [Ash of War] Golden Slam - FP - Slam #2:
     [category]: 0 -> 12
 
-  300000805 Shared [AOW] Golden Slam:
+  300000805 [Ash of War] Golden Slam - No FP - Slam #1:
     [category]: 5 -> 12
 
-  300000806 Shared [AOW] Golden Slam:
+  300000806 [Ash of War] Golden Slam - No FP - Slam #2:
     [category]: 5 -> 12
 
-  300000812 Shared [AOW] Waves of Darkness:
+  300000812 [Ash of War] Waves of Darkness - FP - Bullet:
     [category]: 0 -> 1
 
-  300000831 Shared [AOW] Prelate's Charge:
+  300000831 [Ash of War] Prelate's Charge - FP - Start Charge - Bullet:
     [category]: 0 -> 1
 
-  300000835 Shared [AOW] Prelate's Charge:
+  300000835 [Ash of War] Prelate's Charge - FP - Start Charge - Bullet:
     [category]: 0 -> 1
 
-  300000836 Shared [AOW] Prelate's Charge:
+  300000836 [Ash of War] Prelate's Charge - FP - Mid-Charge - Bullet:
     [category]: 0 -> 1
 
-  300000841 Shared [AOW] Beast's Roar:
+  300000841 [Ash of War] Beast's Roar - FP - Bullet:
     [category]: 0 -> 1
 
-  300000850 Shared [AOW] Troll's Roar:
+  300000850 [Ash of War] Troll's Roar - FP - Stomp:
     [category]: 0 -> 12
 
-  300000853 Shared [AOW] Troll's Roar:
+  300000853 [Ash of War] Troll's Roar:
     [category]: 0 -> 12
 
-  300000854 Shared [AOW] Troll's Roar:
+  300000854 [Ash of War] Troll's Roar - FP - Stomp:
     [category]: 0 -> 12
 
-  300000855 Shared [AOW] Troll's Roar:
+  300000855 [Ash of War] Troll's Roar - No FP - Stomp:
     [category]: 0 -> 12
 
-  300000870 Shared [AOW] Shield Crash/Spectral Lance:
+  300000870 [Ash of War] Spectral Lance - FP - Bullet:
     [category]: 0 -> 1
 
-  300000880 Shared [AOW] Hoarah Loux's Earthshaker:
+  300000880 [Ash of War] Hoarah Loux's Earthshaker - FP - Stomp:
     [category]: 0 -> 12
 
-  300000881 Shared [AOW] Hoarah Loux's Earthshaker:
+  300000881 [Ash of War] Hoarah Loux's Earthshaker - FP - Slam Continue:
     [category]: 0 -> 12
 
-  300000882 Shared [AOW] Hoarah Loux's Earthshaker:
+  300000882 [Ash of War] Hoarah Loux's Earthshaker - FP - Raise Leg #2:
     [category]: 0 -> 12
 
-  300000883 Shared [AOW] Hoarah Loux's Earthshaker:
+  300000883 [Ash of War] Hoarah Loux's Earthshaker - FP - Raise Leg #3:
     [category]: 0 -> 12
 
-  300000884 Shared [AOW] Hoarah Loux's Earthshaker:
+  300000884 [Ash of War] Hoarah Loux's Earthshaker - FP - Raise Leg #1:
     [category]: 0 -> 12
 
-  300000885 Shared [AOW] Hoarah Loux's Earthshaker:
+  300000885 [Ash of War] Hoarah Loux's Earthshaker - No FP - Stomp:
     [category]: 0 -> 12
 
-  300205900 Sword of St. Trina - [AOW] Mists of Slumber:
+  300205900 Sword of St. Trina:
     [category]: 0 -> 1
 
-  300302900 Sword of Milos - [AOW] Shriek of Milos:
+  300302900 Sword of Milos - [Ash of War] Shriek of Milos:
     [refId]: 303401101 -> 303400400
     [category]: 1 -> 12
 
-  300302901 Sword of Milos - [AOW] Shriek of Milos:
+  300302901 Sword of Milos - [Ash of War] Shriek of Milos:
     [refId]: 303401102 -> 303400401
     [category]: 1 -> 12
 
-  301005900 Eleonora's Poleblade - [AOW] Bloodblade Dance:
+  301005900 Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #1:
     [stamina]: 6 -> 8
 
-  301005901 Eleonora's Poleblade - [AOW] Bloodblade Dance:
+  301005901 Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #2:
     [stamina]: 6 -> 8
 
-  301005902 Eleonora's Poleblade - [AOW] Bloodblade Dance:
+  301005902 Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #3:
     [stamina]: 8 -> 10
 
-  301005903 Eleonora's Poleblade - [AOW] Bloodblade Dance:
+  301005903 Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #4:
     [stamina]: 8 -> 10
 
-  301005904 Eleonora's Poleblade - [AOW] Bloodblade Dance:
+  301005904 Eleonora's Poleblade - [Ash of War] Bloodblade Dance - FP - Hit #5:
     [stamina]: 12 -> 14
 
-  301113900 Ringed Finger - [AOW] Claw Flick:
+  301113900 Ringed Finger:
     [category]: 0 -> 12
 
-  301113905 Ringed Finger - [AOW] Claw Flick:
+  301113905 Ringed Finger:
     [category]: 0 -> 12
 
-  301116900 Scepter of the All-Knowing - [AOW] Knowledge Above All:
+  301116900 Scepter of the All-Knowing - [Ash of War] Knowledge Above All - FP:
     [category]: 0 -> 1
 
   301117900:
     [category]: 0 -> 1
 
-  301604901 Cleanrot Spear - [AOW] Sacred Phalanx:
+  301604901 Cleanrot Spear - [Ash of War] Sacred Phalanx - FP - Bullet:
     [category]: 0 -> 1
 
   301703900 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt - FP - Hit #1) does not exist in comparison.
@@ -315,34 +315,34 @@
   301703970 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt - No FP - Hit) does not exist in comparison.
   301703971 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt - No FP - Followup - Hit) does not exist in comparison.
   301703975 (Serpent-Hunter - [Ash of War] Great-Serpent Hunt) does not exist in comparison.
-  302112902 Veteran's Prosthesis - [AOW] Storm Kick:
+  302112902 Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Followup #1 - Hit #1:
     [category]: 0 -> 12
 
-  302112907 Veteran's Prosthesis - [AOW] Storm Kick:
+  302112907 Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Followup #1 - Hit #1:
     [category]: 0 -> 12
 
-  302112912 Veteran's Prosthesis - [AOW] Storm Kick:
+  302112912 Veteran's Prosthesis - [Ash of War] Storm Kick - FP - Followup #2 - Hit #1:
     [category]: 0 -> 12
 
-  302112917 Veteran's Prosthesis - [AOW] Storm Kick:
+  302112917 Veteran's Prosthesis - [Ash of War] Storm Kick - No FP - Followup #2 - Hit #1:
     [category]: 0 -> 12
 
-  303208900 Erdtree Greatshield - [AOW] Golden Retaliation:
+  303208900 Erdtree Greatshield - [Ash of War] Golden Retaliation - FP - Bullet #1:
     [category]: 0 -> 12
 
-  303208901 Erdtree Greatshield - [AOW] Golden Retaliation:
+  303208901 Erdtree Greatshield - [Ash of War] Golden Retaliation:
     [category]: 0 -> 12
 
-  303208905 Erdtree Greatshield - [AOW] Golden Retaliation:
+  303208905 Erdtree Greatshield - [Ash of War] Golden Retaliation - FP - Bullet #2:
     [category]: 0 -> 12
 
-  303208906 Erdtree Greatshield - [AOW] Golden Retaliation:
+  303208906 Erdtree Greatshield - [Ash of War] Golden Retaliation:
     [category]: 0 -> 12
 
-  303216900 Visage Shield - [AOW] Tongues of Fire:
+  303216900 Visage Shield - [Ash of War] Tongues of Fire - FP - Bullet:
     [stamina]: 14 -> 20
 
-  303216905 Visage Shield - [AOW] Tongues of Fire:
+  303216905:
     [stamina]: 14 -> 20
 
   910000000 ([Ash of War] Spinning Chain - FP - Slam - Hit #1) does not exist in comparison.
@@ -845,6 +845,92 @@
   960000960 (Glintstone Kris) does not exist in comparison.
   960000961 (Glintstone Kris) does not exist in comparison.
   960000962 (Glintstone Kris) does not exist in comparison.
+[-- EquipParamGem --]
+  86001 (Destined Death) does not exist in comparison.
+  86002 (Angel's Wings) does not exist in comparison.
+  86003 (Great Oracular Bubble) does not exist in comparison.
+  86004 (Night-and-Flame Stance) does not exist in comparison.
+  86005 (Taker's Flames) does not exist in comparison.
+  86006 (Transient Moonlight) does not exist in comparison.
+  86007 (Bloodboon Ritual) does not exist in comparison.
+  86008 (Cursed-Blood Slice) does not exist in comparison.
+  86010 (Death Flare) does not exist in comparison.
+  86011 (Dynast's Finesse) does not exist in comparison.
+  86012 (Eochaid's Dancing Blade) does not exist in comparison.
+  86013 (Flame Dance) does not exist in comparison.
+  86014 (Ice Lightning Sword) does not exist in comparison.
+  86015 (Knowledge Above All) does not exist in comparison.
+  86016 (Magma Guillotine) does not exist in comparison.
+  86017 (Nebula) does not exist in comparison.
+  86018 (Shriek of Milos) does not exist in comparison.
+  86019 (Siluria's Woe) does not exist in comparison.
+  86020 (Wave of Gold) does not exist in comparison.
+  86021 (Waterfowl Dance) does not exist in comparison.
+  86022 (Frenzyflame Thrust) does not exist in comparison.
+  86023 (Ordovis's Vortex) does not exist in comparison.
+  86024 (Corpse Piler) does not exist in comparison.
+  86025 (Storm Kick) does not exist in comparison.
+  86026 (Bloodblade Dance) does not exist in comparison.
+  86027 (Bloodhound's Finesse) does not exist in comparison.
+  86028 (The Queen's Black Flame) does not exist in comparison.
+  86029 (Thundercloud Form) does not exist in comparison.
+  86030 (Ruinous Ghostflame) does not exist in comparison.
+  86031 (Fires of Slumber) does not exist in comparison.
+  86032 (Gravity Bolt) does not exist in comparison.
+  86033 (Erdtree Slam) does not exist in comparison.
+  86034 (Sorcery of the Crozier) does not exist in comparison.
+  86035 (Great-Serpent Hunt) does not exist in comparison.
+  86036 (Sacred Phalanx) does not exist in comparison.
+  86037 (Thunderstorm) does not exist in comparison.
+  86038 (Rosus's Summons) does not exist in comparison.
+  86039 (Familial Rancor) does not exist in comparison.
+  86040 (Devourer of Worlds) does not exist in comparison.
+  86041 (MOONVEIL DUPE) does not exist in comparison.
+  86042 (Magma Shower) does not exist in comparison.
+  86043 (Radahn's Rain) does not exist in comparison.
+  86044 (Zamor Ice Storm) does not exist in comparison.
+  86045 (Corpse Wax Cutter) does not exist in comparison.
+  86046 (Unblockable Blade) does not exist in comparison.
+  86047 (Last Rites) does not exist in comparison.
+  86048 (Golden Tempering) does not exist in comparison.
+  86049 (Miquella's Ring of Light) does not exist in comparison.
+  86050 (Ancient Lightning Spear ) does not exist in comparison.
+  86051 (Ghostflame Ignition) does not exist in comparison.
+  86052 (Claw Flick) does not exist in comparison.
+  86053 (Regal Beastclaw) does not exist in comparison.
+  86054 (Oath of Vengeance) does not exist in comparison.
+  86055 (Onyx Lord's Repulsion) does not exist in comparison.
+  86056 (Alabaster Lord's Pull) does not exist in comparison.
+  86057 (Spinning Wheel) does not exist in comparison.
+  86058 (Blade of Gold) does not exist in comparison.
+  86059 (Blade of Death) does not exist in comparison.
+  86060 (Flowing Form (Hammer)) does not exist in comparison.
+  86061 (Flowing Form (Sword) DOESNT HAVE ANYTHING) does not exist in comparison.
+  86062 (Wave of Destruction) does not exist in comparison.
+  86063 (Starcaller Cry) does not exist in comparison.
+  86064 (Regal Roar) does not exist in comparison.
+  86065 (I Command Thee- Kneel!) does not exist in comparison.
+  86066 (Gold Breaker) does not exist in comparison.
+  86067 (Wolf's Assault) does not exist in comparison.
+  86068 (Spearcall Ritual) does not exist in comparison.
+  86069 (Mists of Slumber) does not exist in comparison.
+  86070 (Establish Order) does not exist in comparison.
+  86071 (Glintstone Dart) does not exist in comparison.
+  86072 (Firebreather) does not exist in comparison.
+  86073 (Soul Stifler) does not exist in comparison.
+  86074 (Bear Witness!) does not exist in comparison.
+  86075 (Rallying Standard) does not exist in comparison.
+  86076 (Moonlight Greatsword) does not exist in comparison.
+  86077 (Sea of Magma) does not exist in comparison.
+  86078 (Bubble Shower) does not exist in comparison.
+  86079 (Oracular Bubble) does not exist in comparison.
+  86080 (Reduvia Blood Blade) does not exist in comparison.
+  86081 (Contagious Fury) does not exist in comparison.
+  86082 (Golden Retaliation) does not exist in comparison.
+  86083 (Viper Bite) does not exist in comparison.
+  86084 (Tongues of Fire) does not exist in comparison.
+  86085 (Flame Spit) does not exist in comparison.
+  86086 (Surge of Faith) does not exist in comparison.
 [-- ShopLineupParam_Recipe --]
   38500 (Destined Death) does not exist in comparison.
   38501 (Night-and-Flame Stance) does not exist in comparison.
